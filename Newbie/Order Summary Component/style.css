@@ -34,15 +34,34 @@ body {
 
 h1 {
     font-weight: 900;
+    font-size: 1.6rem;
+
+    color: var(--neutral-color-3);
+
+    margin: 10px auto;
 }
 
 h2 {
     font-weight: 700;
+    font-size: 1rem;
+
+    color: var(--neutral-color-3);
+
+    margin: 10px auto;
 }
 
 p {
     font-weight: 500;
     font-size: 16px;
+
+    color: var(--neutral-color-2);
+
+    margin: 10px auto;
+}
+
+a {
+    color: var(--primary-color-2);
+    font-weight: 700;
 }
 
 /* Modal Box */
@@ -56,31 +75,68 @@ p {
     background-color: white;
     border-radius: 20px;
 
-    width: min(100%, 375px);
-    height: 80vh;
+    width: min(100%, 400px);
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-box__image {
-    background-image: url('./images/illustration-hero.svg');
-
     border-radius: 20px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 
     background-repeat: no-repeat;
 
-    height: 250px;
+    width: 100%;
 }
 
 .modal-box__content {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 50px;
+    padding-top: 40px;
+
+    text-align: center;
 }
 
 .modal-box__plan-container {
+    width: 100%;
 
+    margin: 20px auto;
 }
 
 .modal-box__plan-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
 
+    background-color: var(--neutral-color-1);
+    padding: 1rem;
+    border-radius: 15px;
+
+    align-items: center;
+
+    width: 100%;
 }
 
+.modal-box__plan-item__details {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.modal-box__plan-item__details h2,
+.modal-box__plan-item__details p {
+    margin: 0px;
+    
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.modal-box__plan-item__change {
+    font-size: .8rem;
+}
