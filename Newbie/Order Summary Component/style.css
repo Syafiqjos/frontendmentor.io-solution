@@ -18,11 +18,12 @@
 /* Layout */
 
 body {
+    position: relative;
     margin: 0;
     padding: 1rem;
 
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
 
     background-image: url('./images/pattern-background-desktop.svg');
     background-color: var(--primary-color-1);
@@ -80,6 +81,8 @@ a {
 
     display: flex;
     flex-direction: column;
+
+    box-shadow: 0px 20px 24px hsla(223, 47%, 23%, 0.1);
 }
 
 .modal-box__image {
@@ -154,6 +157,8 @@ a {
 .modal-box .btn-primary {
     color: white;
     background-color: var(--primary-color-2);
+
+    box-shadow: 0px 10px 20px hsla(223, 47%, 23%, 0.2);
 
     border: none;
 }
