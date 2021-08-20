@@ -42,7 +42,7 @@ h1 {
 }
 
 h2 {
-    font-weight: 700;
+    font-weight: 900;
     font-size: 1rem;
 
     color: var(--neutral-color-3);
@@ -76,7 +76,7 @@ a {
     border-radius: 20px;
 
     width: min(100%, 400px);
-    height: 90vh;
+    height: 640px;
 
     display: flex;
     flex-direction: column;
@@ -114,7 +114,7 @@ a {
     grid-template-columns: 1fr 3fr 1fr;
 
     background-color: var(--neutral-color-1);
-    padding: 1rem;
+    padding: 1.2rem 1rem;
     border-radius: 15px;
 
     align-items: center;
@@ -139,4 +139,27 @@ a {
 
 .modal-box__plan-item__change {
     font-size: .8rem;
+}
+
+.modal-box .btn {
+    width: 100%;
+    height: 50px;
+
+    margin: 5px 0px;
+
+    font-weight: 900;
+    border-radius: 10px;
+}
+
+.modal-box .btn-primary {
+    color: white;
+    background-color: var(--primary-color-2);
+
+    border: none;
+}
+
+.modal-box .btn-secondary {
+    border: none;
+    background-color: transparent;
+    color: var(--neutral-color-2);
 }
