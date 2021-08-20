@@ -4,6 +4,8 @@
     --primary-color-1:hsl(225, 100%, 94%);
     --primary-color-2:hsl(245, 75%, 52%);
 
+    --clicked-color-2:hsl(245, 75%, 62%);
+
     --neutral-color-1: hsl(225, 100%, 98%);
     --neutral-color-2: hsl(224, 23%, 55%);
     --neutral-color-3: hsl(223, 47%, 23%);
@@ -63,6 +65,11 @@ p {
 a {
     color: var(--primary-color-2);
     font-weight: 700;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--clicked-color-2);
 }
 
 /* Modal Box */
@@ -164,12 +171,24 @@ a {
     box-shadow: 0px 10px 20px hsla(223, 47%, 23%, 0.2);
 
     border: none;
+
+    cursor: pointer;
+}
+
+.modal-box .btn-primary:hover {
+    background-color: var(--clicked-color-2);
 }
 
 .modal-box .btn-secondary {
     border: none;
     background-color: transparent;
     color: var(--neutral-color-2);
+
+    cursor: pointer;
+}
+
+.modal-box .btn-secondary:hover {
+    color: black;
 }
 
 @media screen and (max-width: 400px) {
