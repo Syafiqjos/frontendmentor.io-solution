@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
-.root {
+:root {
     --primary-color-1:hsl(225, 100%, 94%);
     --primary-color-2:hsl(245, 75%, 52%);
 
@@ -15,10 +15,72 @@
     padding: 0px;
 }
 
+/* Layout */
+
 body {
+    margin: 0;
+    padding: 1rem;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-color: var(--primary-color-1);
+    background-size: contain;
+    background-repeat: no-repeat;
+
     font-family: "Red Hat Display", sans-serif;
 }
 
+h1 {
+    font-weight: 900;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Modal Box */
+
 .modal-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+    border-radius: 20px;
+
+    width: min(100%, 375px);
+    height: 80vh;
+}
+
+.modal-box__image {
+    background-image: url('./images/illustration-hero.svg');
+
+    border-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    background-repeat: no-repeat;
+
+    height: 250px;
+}
+
+.modal-box__content {
     
 }
+
+.modal-box__plan-container {
+
+}
+
+.modal-box__plan-item {
+
+}
+
