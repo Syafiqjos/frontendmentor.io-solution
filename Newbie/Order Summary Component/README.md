@@ -96,4 +96,6 @@ I always forget about box-shadow syntax on css.
 
 ## Acknowledgments
 
-Thank you for frontendmentor community!
+Thank you to Vanza Setia for the wonderful feedback! [Feedback](https://www.frontendmentor.io/solutions/order-summary-challenge-with-responsive-grid-and-flexbox-Tl1EBKdmK)
+
+Also thank you to frontendmentor.io community!
