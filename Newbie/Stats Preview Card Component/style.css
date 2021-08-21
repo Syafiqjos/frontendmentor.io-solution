@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca:wght@400;700&display=swap');
+
+
+:root {
+    --primary-color-1: hsl(233, 47%, 7%);
+    --primary-color-2: hsl(244, 38%, 16%);
+    --primary-color-3: hsl(277, 64%, 61%);
+
+    --neutral-color-1: hsl(0, 0%, 100%);
+    --neutral-color-2: hsla(0, 0%, 100%, 0.75);
+    --neutral-color-3: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Inter', sans-serif;
+}
+
+/* Layouts */
+
+body {
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h2 {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/* Modal Box */
+
+.modal-box {
+
+}
+
+.modal-box__hero {
+
+}
+
+.modal-box__hero-img {
+
+}
+
+.modal-box__title {
+
+}
+
+.modal-box__text {
+
+}
+
+.modal-box__info-container {
+
+}
+
+.modal-box__info-item {
+
+}
+
+.modal-box__info-number {
+
+}
+
+.modal-box__info-text {
+    
+}
+
+/* Attribution */
+
+.attribution {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 1rem;
+
+    text-align: center;
+
+    background-color: var(--primary-color-1);
+    color: var(--neutral-color-1);
+}
+
+.attribution a {
+    color: var(--neutral-color-1);
+    text-decoration: none;
+    font-weight: 900;
+}
