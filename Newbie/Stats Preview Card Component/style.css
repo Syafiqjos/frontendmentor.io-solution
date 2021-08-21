@@ -5,6 +5,7 @@
     --primary-color-1: hsl(233, 47%, 7%);
     --primary-color-2: hsl(244, 38%, 16%);
     --primary-color-3: hsl(277, 64%, 61%);
+    --primary-color-3-a: hsla(277, 84%, 24%, 0.6);
 
     --neutral-color-1: hsl(0, 0%, 100%);
     --neutral-color-2: hsla(0, 0%, 100%, 0.75);
@@ -24,13 +25,22 @@
 
 body {
     min-height: 100vh;
+
+    font-size: 15px;
+
+    background-color: var(--primary-color-1);
 }
 
 main {
     display: flex;
 
+    min-height: 100vh;
+    padding: 1rem;
+
     justify-content: center;
     align-items: center;
+
+    background-color: var(--primary-color-1);
 }
 
 h1 {
@@ -44,23 +54,54 @@ h2 {
 /* Modal Box */
 
 .modal-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
+    position: relative;
+
+    max-width:840px;
+    height: 320px;
+
+    background-color: var(--primary-color-2);
+
+    border-radius: 1rem;
 }
 
 .modal-box__hero {
+    position: absolute;
+    right: 0;
 
+    width: 50%;
+    height: 100%;
+
+    background-color: var(--primary-color-2);
+    background-image: linear-gradient(to right, var(--primary-color-3-a), var(--primary-color-3-a)) 
+                        ,url('./images/image-header-desktop.jpg');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right;
+
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
-.modal-box__hero-img {
+.modal-box__content {
+    position: relative;
+    padding: 3rem;
 
+    width: 50%;
+
+    z-index: 10;
 }
 
 .modal-box__title {
-
+    color: var(--neutral-color-1);
 }
 
 .modal-box__text {
-
+    color: var(--neutral-color-2);
 }
 
 .modal-box__info-container {
@@ -76,13 +117,13 @@ h2 {
 }
 
 .modal-box__info-text {
-    
+
 }
 
 /* Attribution */
 
 .attribution {
-    position: absolute;
+    position: fixed;
 
     bottom: 0;
     left: 0;
