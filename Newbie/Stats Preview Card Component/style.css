@@ -61,6 +61,7 @@ h2 {
 
     position: relative;
 
+    width: 900px;
     width: min(900px, 100%);
     min-height: 380px;
 
