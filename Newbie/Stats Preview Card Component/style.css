@@ -60,12 +60,12 @@ h2 {
 
     position: relative;
 
-    max-width:840px;
-    height: 320px;
+    max-width:900px;
+    height: 360px;
 
     background-color: var(--primary-color-2);
 
-    border-radius: 1rem;
+    border-radius: .5rem;
 }
 
 .modal-box__hero {
@@ -83,8 +83,8 @@ h2 {
     background-repeat: no-repeat;
     background-position-x: right;
 
-    border-bottom-right-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border-bottom-right-radius: .5rem;
+    border-top-right-radius: .5rem;
 }
 
 .modal-box__content {
@@ -92,16 +92,26 @@ h2 {
     padding: 3rem;
 
     width: 50%;
+    height: 100%;
 
     z-index: 10;
 }
 
 .modal-box__title {
     color: var(--neutral-color-1);
+
+    margin-bottom: 1em;
+}
+
+.modal-box__title--spot {
+    color: var(--primary-color-3);
 }
 
 .modal-box__text {
     color: var(--neutral-color-2);
+
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .modal-box__info-container {
