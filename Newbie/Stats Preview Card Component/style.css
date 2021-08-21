@@ -55,13 +55,14 @@ h2 {
 
 .modal-box {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 
     position: relative;
 
-    max-width:900px;
-    height: 380px;
+    width: min(900px, 100%);
+    min-height: 380px;
 
     background-color: var(--primary-color-2);
 
@@ -94,10 +95,10 @@ h2 {
     position: relative;
     padding: 3rem;
 
-    width: 50%;
-    height: 100%;
+    min-width: 50%;
+    max-width: 50ch;
 
-    z-index: 10;
+    height: 100%;
 }
 
 .modal-box__title {
@@ -115,7 +116,7 @@ h2 {
 
     font-size: 1rem;
 
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .modal-box__info-container {
@@ -176,4 +177,37 @@ h2 {
     color: var(--neutral-color-1);
     text-decoration: none;
     font-weight: 900;
+}
+
+@media all and (max-width: 400px){
+    .modal-box {
+        flex-direction: column;
+    }
+
+    .modal-box__hero {
+        position: relative;
+    
+        width: 100%;
+        height: 420px;
+        
+        background-repeat: no-repeat;
+        background-position-x: center;
+    
+        border-radius: 0;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+
+    .modal-box__info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-box {
+        text-align: center;
+    }
+
+    .attribution {
+        position: static;
+    }
 }
