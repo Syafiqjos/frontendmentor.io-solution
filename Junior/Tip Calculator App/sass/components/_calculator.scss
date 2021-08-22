@@ -17,6 +17,7 @@
 
     font-family: $font-spacemono;
 
+    width: 90%;
     max-width: min(800px, 90%);
     min-height: 400px;
 
@@ -273,6 +274,52 @@
                 background-color: $neutral-color-4-sat;
                 color: $neutral-color-1;
             }
+        }
+    }
+}
+
+@media all and (max-width: 700px){
+    .calculator {
+        grid-template-columns: repeat(auto-fill, 100%);
+
+        padding: 1rem;
+        margin-bottom: 40px;
+
+        &__control-item {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &__input--error::after {
+            font-size: 0.7rem;
+        }
+
+        &__result-item {
+            padding-right: 0px;
+        }
+
+        &__result-price {
+            font-size: 2rem;
+
+            text-align: right;
+        }
+    }
+}
+
+@media all and (max-width: 400px){
+    .calculator {
+        &__tip-btn-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__result {
+            padding: 1rem;
+        }
+
+        &__result-item {
+            grid-template-areas: 
+                'tip person'
+                'price price'
         }
     }
 }

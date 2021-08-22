@@ -61,6 +61,7 @@ main {
   border-radius: 1rem;
   padding: 2rem;
   font-family: "Space Mono", monospace;
+  width: 90%;
   max-width: min(800px, 90%);
   min-height: 400px;
 }
@@ -238,8 +239,47 @@ main {
   color: var(--neutral-color-1);
 }
 
+@media all and (max-width: 700px) {
+  .calculator {
+    grid-template-columns: repeat(auto-fill, 100%);
+    padding: 1rem;
+    margin-bottom: 40px;
+  }
+  .calculator__control-item {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .calculator__input--error::after {
+    font-size: 0.7rem;
+  }
+  .calculator__result-item {
+    padding-right: 0px;
+  }
+  .calculator__result-price {
+    font-size: 2rem;
+    text-align: right;
+  }
+}
+@media all and (max-width: 400px) {
+  .calculator__tip-btn-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .calculator__result {
+    padding: 1rem;
+  }
+  .calculator__result-item {
+    grid-template-areas: "tip person" "price price";
+  }
+}
 .logo-splitter {
   margin-bottom: 4rem;
+}
+
+@media all and (max-width: 700px) {
+  .logo-splitter {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

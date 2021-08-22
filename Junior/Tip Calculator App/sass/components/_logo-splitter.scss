@@ -1,3 +1,10 @@
 .logo-splitter {
     margin-bottom: 4rem;
 }
+
+@media all and (max-width: 700px){
+    .logo-splitter {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+}
