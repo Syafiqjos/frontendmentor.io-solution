@@ -121,7 +121,7 @@ main {
 .calculator__input-field {
   padding: 1em;
   width: 100%;
-  height: 2rem;
+  height: 4rem;
   background-color: var(--neutral-color-5);
   color: var(--neutral-color-1);
   font-size: 1.2rem;
