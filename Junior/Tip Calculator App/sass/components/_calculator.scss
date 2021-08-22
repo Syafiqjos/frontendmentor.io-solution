@@ -1,45 +1,150 @@
 @use '../abstracts' as *;
 
 .calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     background-color: $neutral-color-6;
+    color: $neutral-color-2;
+
     border-radius: 2rem;
 
     padding: 2rem;
 
     font-family: $font-spacemono;
 
-    min-width: 800px;
+    max-width: min(800px, 90%);
     min-height: 400px;
 
-    &__control {
+    & * {
+        font-family: $font-spacemono;
+    }
 
+    &__control {
+        display: flex;
+        flex-direction: column;
+
+        padding: 0.2rem;
     }
 
     &__control-item {
+        padding: 0.8rem;
 
+        display: flex;
+        flex-direction: column;
     }
 
     &__label {
+        font-size: 1rem;
 
+        font-weight: 700;
+        margin-bottom: 1em;
     }
 
     &__input {
+        position: relative;
 
+        padding: 0;
+
+        &--dollars::before {
+            content: '$';
+
+            position: absolute;
+
+            left: 10px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            text-align: left;
+
+            color: $neutral-color-3;
+        }
+
+        &--people::before {
+            content: 'P';
+
+            position: absolute;
+
+            left: 10px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            text-align: left;
+
+            color: $neutral-color-3;
+        }
+    }
+
+    &__input-field {
+        padding: 1em;
+
+        width: 100%;
+        height: 2rem;
+
+        background-color: $neutral-color-5;
+        color: $neutral-color-3;
+
+        font-size: 1.2rem;
+        font-weight: 700;
+
+        text-align: right;
+
+        border: none;
+    }
+
+    &__tip-btn-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
     }
 
     &__tip-btn {
+        background-color: $neutral-color-1;
+        color: $neutral-color-6;
+
+        width: 100%;
+        padding: 0.5rem 1rem;
+
+        border: none;
+        border-radius: 0.2rem;
+
+        font-size: 1.2rem;
+        font-weight: 700;
 
         &--active {
 
         }
     }
 
+    &__tip-input {
+        background-color: $neutral-color-5;
+        color: $neutral-color-2;
+
+        font-size: 1.2rem;
+        font-weight: 700;
+
+        width: 100%;
+        padding: 0.2rem 1rem;
+
+        border: none;
+    }
+
     &__result {
-        
+        display: flex;
+        flex-direction: column;
+
+        padding: 1rem;
+
+        background-color: $neutral-color-1;
+        color: $neutral-color-6;
     }
 
     &__result-item {
-        
+        width: 100%;
+
+        padding: 0.8rem;
     }
 
     &__result-title {
@@ -55,7 +160,7 @@
     }
 
     &__result-btn {
-        
+
         &--active {
 
         }

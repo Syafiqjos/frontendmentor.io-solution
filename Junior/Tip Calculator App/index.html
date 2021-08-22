@@ -19,22 +19,26 @@
       <div class="calculator__control">
         <div class="calculator__control-item">
           <label class="calculator__label" for="calculator-bill">Bill</label>
-          <input class="calculator__input" type="text" id="calculator-bill" />
+          <div class="calculator__input calculator__input--dollars">
+            <input class="calculator__input-field" type="text" id="calculator-bill" value="0" />
+          </div>
         </div>
         <div class="calculator__control-item">
           <label class="calculator__label" for="calculator-tip-custom">Select Tip %</label>
-          <div class="calculator__input" class="calculator__tip-btn-container">
+          <div class="calculator__tip-btn-container">
             <button class="calculator__tip-btn">5%</button>
             <button class="calculator__tip-btn calculator__tip-btn--active">10%</button>
             <button class="calculator__tip-btn">15%</button>
             <button class="calculator__tip-btn">25%</button>
             <button class="calculator__tip-btn">50%</button>
-            <input class="calculator__tip-btn calculator__input" type="text" id="calculator-tip-custom" />
+            <input class="calculator__tip-input" type="text" id="calculator-tip-custom" value="Custom" />
           </div>
         </div>
         <div class="calculator__control-item">
           <label class="calculator__label" for="calculator-people">Number of People</label>
-          <input class="calculator__input" type="text" id="calculator-people" />
+          <div class="calculator__input calculator__input--people">
+            <input class="calculator__input-field" type="text" id="calculator-people" value="0" />
+          </div>
         </div>
       </div>
       <div class="calculator__result">
