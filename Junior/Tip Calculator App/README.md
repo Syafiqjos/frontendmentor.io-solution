@@ -104,4 +104,6 @@ Thank you to Dev Ed who make a great sass introduction.
 
 And to Kevin Powell videos about sass file organization.
 
+Edit: Thanks to Chamu and Sky who help me point out my errors!
+
 Also thank you to frontendmentor.io community!

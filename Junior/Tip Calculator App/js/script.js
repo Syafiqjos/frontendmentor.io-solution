@@ -50,7 +50,7 @@ function initializeTipCustom(){
 
         let x = this.value;
 
-        tip = x < 0 ? 0 : (x >= 1000 ? 1000 : x);
+        tip = x < 0 ? 0 : (x >= 100 ? 100 : x);
 
         tipCustom.value = tip;
 
@@ -163,5 +163,11 @@ function countPersonTipAmount(){
 }
 
 function countPersonTotal(){
-    return Math.round((bill + bill * tip / 100) / people * 100) / 100;
+    let total = (Number.parseFloat(bill) + Number.parseFloat(bill * tip / 100));
+    // console.log(bill + ' + ' + (bill * tip / 100) + ' = ' + total);
+    return Math.round(total / people * 100) / 100;
+
+    return total;
+
+    // (100 + 100 * 5 / 100) = 105 / 1
 }
