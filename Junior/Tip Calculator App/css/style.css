@@ -1,3 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+:root {
+  --primary-color-1: hsl(172, 67%, 45%);
+  --neutral-color-1: hsl(183, 100%, 15%);
+  --neutral-color-2: hsl(186, 14%, 43%);
+  --neutral-color-3: hsl(184, 14%, 56%);
+  --neutral-color-4: hsl(185, 41%, 84%);
+  --neutral-color-5: hsl(189, 41%, 97%);
+  --neutral-color-6: hsl(0, 0%, 100%);
+}
 
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border;
+}
+
+body {
+  font-size: 24px;
+}
+
+body {
+  background-color: var(--neutral-color-4);
+}
 
 /*# sourceMappingURL=style.css.map */
