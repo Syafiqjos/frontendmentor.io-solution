@@ -95,7 +95,7 @@
         border: none;
         border-radius: 0.2rem;
 
-        outline-color: $neutral-color-4;
+        outline-color: $neutral-color-4-sat;
         outline-width: 2px;
     }
 
@@ -130,6 +130,13 @@
         &--active {
             background-color: $primary-color-1;
             color: $neutral-color-1;
+
+            cursor: default;
+
+            &:hover {
+                background-color: $primary-color-1;
+                color: $neutral-color-1;
+            }
         }
     }
 
@@ -146,7 +153,7 @@
         border: none;
         border-radius: 0.2rem;
 
-        outline-color: $neutral-color-4;
+        outline-color: $neutral-color-4-sat;
         outline-width: 2px;
     }
 
