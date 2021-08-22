@@ -1,5 +1,10 @@
 @use '../abstracts' as *;
 
 .calculator {
-    
+    background-color: $neutral-color-6;
+    border-radius: 2rem;
+
+    padding: 2rem;
+
+    font-family: $font-spacemono;
 }

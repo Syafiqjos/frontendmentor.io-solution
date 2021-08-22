@@ -19,8 +19,40 @@ body {
   font-size: 24px;
 }
 
+.attribution {
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--neutral-color-1);
+  color: var(--neutral-color-6);
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+  text-align: center;
+  bottom: 0;
+}
+.attribution a {
+  text-decoration: none;
+  color: var(--neutral-color-6);
+}
+
 body {
   background-color: var(--neutral-color-4);
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.calculator {
+  background-color: var(--neutral-color-6);
+  border-radius: 2rem;
+  padding: 2rem;
+  font-family: "Space Mono", monospace;
 }
 
 /*# sourceMappingURL=style.css.map */

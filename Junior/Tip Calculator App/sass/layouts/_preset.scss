@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 * {
     padding: 0px;
     margin: 0px;
@@ -7,4 +9,26 @@
 
 body {
     font-size: 24px;
+}
+
+.attribution {
+    position: fixed;
+    width: 100%;
+
+    padding: 1rem;
+
+    background-color: $neutral-color-1;
+    color: $neutral-color-6;
+    
+    font-family: $font-spacemono;
+    font-size: 1rem;
+
+    text-align: center;
+
+    bottom: 0;
+
+    & a {
+        text-decoration: none;
+        color: $neutral-color-6;
+    }
 }
