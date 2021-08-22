@@ -1,42 +1,17 @@
-function Calculator() {
-    this.bill = 0;
-    this.people = 0;
-
-    function changeBill(x){
-        this.bill = x;
-
-        if (x < 0){
-            return 'success';
-        }
-
-        return 'failed';
-    }
-
-    function changePeople(x){
-        this.bill = x;
-
-        if (x < 0){
-            return 'negative';
-        } else if (x == 0){
-            return 'zero';
-        }
-
-        return 'success';
-    }
-
-    return this;
-}
-
-const calc = new Calculator();
-
 const inputBill = document.getElementById('calculator-bill');
 const inputPeople = document.getElementById('calculator-people');
+
+const inputBillParent = inputBill.parentElement;
+const inputPeopleParent = inputPeople.parentElement;
+
 const tipCustom = document.getElementById('calculator-tip-custom');
 
 const tipsList = document.querySelectorAll('.calculator__tip-btn');
 const resetButton = document.getElementById('reset-button');
 
 // START
+let bill = 0;
+let people = 0;
 
 initializeTipsList();
 initializeTipCustom();
@@ -69,14 +44,18 @@ function initializeTipCustom(){
 }
 
 function initializeInputBill(){
-    inputBill.addEventListener('input', () => {
+    inputBill.addEventListener('input', function () {
         checkResetButtonActive(true);
+
+        testBill(this.value);
     });
 }
 
 function initializeInputPeople(){
-    inputPeople.addEventListener('input', () => {
+    inputPeople.addEventListener('input', function() {
         checkResetButtonActive(true);
+
+        testPeople(this.value);
     });
 }
 
@@ -115,5 +94,29 @@ function checkResetButtonActive(check){
         resetButton.classList.remove('calculator__result-btn--active');
 
         return false;
+    }
+}
+
+function testPeople(x){
+    people = x < 0 ? 0 : x;
+
+    inputPeople.value = people;
+
+    if (people <= 0){
+        inputPeopleParent.classList.add('calculator__input--error');
+    } else {
+        inputPeopleParent.classList.remove('calculator__input--error');
+    }
+}
+
+function testBill(x){
+    bill = x < 0 ? 0 : x;
+
+    inputBill.value = bill;
+
+    if (bill <= 0){
+        inputBillParent.classList.add('calculator__input--error');
+    } else {
+        inputBillParent.classList.remove('calculator__input--error');
     }
 }
