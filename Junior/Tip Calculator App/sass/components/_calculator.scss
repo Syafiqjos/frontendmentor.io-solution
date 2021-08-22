@@ -7,4 +7,57 @@
     padding: 2rem;
 
     font-family: $font-spacemono;
+
+    min-width: 800px;
+    min-height: 400px;
+
+    &__control {
+
+    }
+
+    &__control-item {
+
+    }
+
+    &__label {
+
+    }
+
+    &__input {
+
+    }
+
+    &__tip-btn {
+
+        &--active {
+
+        }
+    }
+
+    &__result {
+        
+    }
+
+    &__result-item {
+        
+    }
+
+    &__result-title {
+        
+    }
+
+    &__result-subtitle {
+        
+    }
+
+    &__result-price {
+        
+    }
+
+    &__result-btn {
+        
+        &--active {
+
+        }
+    }
 }

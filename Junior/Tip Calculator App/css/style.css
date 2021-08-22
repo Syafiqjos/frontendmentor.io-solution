@@ -53,6 +53,8 @@ main {
   border-radius: 2rem;
   padding: 2rem;
   font-family: "Space Mono", monospace;
+  min-width: 800px;
+  min-height: 400px;
 }
 
 /*# sourceMappingURL=style.css.map */
