@@ -53,7 +53,7 @@ main {
   grid-template-columns: 1fr 1fr;
   background-color: var(--neutral-color-6);
   color: var(--neutral-color-2);
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 2rem;
   font-family: "Space Mono", monospace;
   max-width: min(800px, 90%);
@@ -137,13 +137,50 @@ main {
 .calculator__result {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2rem;
   background-color: var(--neutral-color-1);
   color: var(--neutral-color-6);
+  border-radius: 1rem;
 }
 .calculator__result-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "tip price" "person price";
   width: 100%;
   padding: 0.8rem;
+  padding-top: 0;
+}
+.calculator__result-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  grid-area: tip;
+  align-self: flex-end;
+  color: var(--neutral-color-5);
+}
+.calculator__result-subtitle {
+  font-size: 0.8rem;
+  grid-area: person;
+  color: var(--neutral-color-3);
+}
+.calculator__result-price {
+  font-size: 2.4rem;
+  font-weight: 600;
+  grid-area: price;
+  color: var(--primary-color-1);
+}
+.calculator__result-btn {
+  width: 100%;
+  border: none;
+  border-radius: 0.4rem;
+  margin-top: auto;
+  padding: 0.5em;
+  justify-self: flex-end;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--primary-color-1);
+  color: var(--neutral-color-1);
 }
 
 /*# sourceMappingURL=style.css.map */
