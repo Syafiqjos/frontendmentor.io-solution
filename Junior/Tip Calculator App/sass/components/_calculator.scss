@@ -93,6 +93,10 @@
         text-align: right;
 
         border: none;
+        border-radius: 0.2rem;
+
+        outline-color: $neutral-color-4;
+        outline-width: 2px;
     }
 
     &__tip-btn-container {
@@ -114,8 +118,18 @@
         font-size: 1.2rem;
         font-weight: 700;
 
-        &--active {
+        transition: opacity, color, background-color 100ms;
+        
+        cursor: pointer;
 
+        &:hover {
+            background-color: $neutral-color-4-sat;
+            color: $neutral-color-1;
+        }
+
+        &--active {
+            background-color: $primary-color-1;
+            color: $neutral-color-1;
         }
     }
 
@@ -130,6 +144,10 @@
         padding: 0.2rem 1rem;
 
         border: none;
+        border-radius: 0.2rem;
+
+        outline-color: $neutral-color-4;
+        outline-width: 2px;
     }
 
     &__result {
@@ -204,11 +222,25 @@
 
         text-align: center;
 
-        background-color: $primary-color-1;
-        color: $neutral-color-1;
+        transition: opacity, color, background-color 100ms;
+
+        &--disabled {
+            background-color: $primary-color-1;
+            color: $neutral-color-1;
+
+            opacity: 20%;
+        }
 
         &--active {
+            background-color: $primary-color-1;
+            color: $neutral-color-1;
 
+            cursor: pointer;
+
+            &:hover {
+                background-color: $neutral-color-4-sat;
+                color: $neutral-color-1;
+            }
         }
     }
 }
