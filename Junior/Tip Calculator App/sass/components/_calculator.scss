@@ -49,6 +49,27 @@
         position: relative;
 
         padding: .2rem;
+
+        &--error::after {
+            content: 'Can\'t be zero';
+
+            position: absolute;
+
+            bottom: 100%;
+            right: 10px;
+
+            font-size: 0.8rem;
+            font-weight: 700;
+
+            color: $error-color;
+        }
+
+        &--error {
+            .calculator__input-field {
+                outline-color: $error-color;
+                border: 2px solid $error-color;
+            }
+        }
     }
 
     &__input-sign {
@@ -155,6 +176,10 @@
 
         outline-color: $neutral-color-4-sat;
         outline-width: 2px;
+
+        &--error {
+            outline-color: $error-color;
+        }
     }
 
     &__result {

@@ -8,6 +8,7 @@
   --neutral-color-4-sat: hsl(185, 84%, 74%);
   --neutral-color-5: hsl(189, 41%, 97%);
   --neutral-color-6: hsl(0, 0%, 100%);
+  --error-color: hsl(0, 90%, 80%);
 }
 
 * {
@@ -85,6 +86,19 @@ main {
   position: relative;
   padding: 0.2rem;
 }
+.calculator__input--error::after {
+  content: "Can't be zero";
+  position: absolute;
+  bottom: 100%;
+  right: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--error-color);
+}
+.calculator__input--error .calculator__input-field {
+  outline-color: var(--error-color);
+  border: 2px solid var(--error-color);
+}
 .calculator__input-sign {
   position: absolute;
   width: 100px;
@@ -158,6 +172,9 @@ main {
   border-radius: 0.2rem;
   outline-color: var(--neutral-color-4-sat);
   outline-width: 2px;
+}
+.calculator__tip-input--error {
+  outline-color: var(--error-color);
 }
 .calculator__result {
   display: flex;
