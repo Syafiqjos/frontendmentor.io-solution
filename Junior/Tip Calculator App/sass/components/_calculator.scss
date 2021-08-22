@@ -1,5 +1,9 @@
 @use '../abstracts' as *;
 
+::placeholder {
+    color: $neutral-color-3;
+}
+
 .calculator {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -44,36 +48,33 @@
     &__input {
         position: relative;
 
-        padding: 0;
+        padding: .2rem;
+    }
 
-        &--dollars::before {
-            content: '$';
+    &__input-sign {
+        position: absolute;
+        
+        width: 100px;
+        height: 1.2rem;
 
-            position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
 
-            left: 10px;
-            top: 50%;
+        left: 10px;
+        top: 50%;
 
-            transform: translateY(-50%);
+        transform: translateY(-50%);
 
-            text-align: left;
+        text-align: left;
 
-            color: $neutral-color-3;
+        color: $neutral-color-3;
+
+        &--dollars {
+            background-image: url('../images/icon-dollar.svg');
         }
 
-        &--people::before {
-            content: 'P';
-
-            position: absolute;
-
-            left: 10px;
-            top: 50%;
-
-            transform: translateY(-50%);
-
-            text-align: left;
-
-            color: $neutral-color-3;
+        &--people {
+            background-image: url('../images/icon-person.svg');
         }
     }
 
@@ -84,7 +85,7 @@
         height: 2rem;
 
         background-color: $neutral-color-5;
-        color: $neutral-color-3;
+        color: $neutral-color-1;
 
         font-size: 1.2rem;
         font-weight: 700;
@@ -120,7 +121,7 @@
 
     &__tip-input {
         background-color: $neutral-color-5;
-        color: $neutral-color-2;
+        color: $neutral-color-1;
 
         font-size: 1.2rem;
         font-weight: 700;
