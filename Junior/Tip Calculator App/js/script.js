@@ -48,7 +48,11 @@ function initializeTipCustom(){
         clearTipsList();
         checkResetButtonActive(true);
 
-        tip = this.value;
+        let x = this.value;
+
+        tip = x < 0 ? 0 : (x >= 1000 ? 1000 : x);
+
+        tipCustom.value = tip;
 
         refreshResult();
     });
@@ -118,7 +122,7 @@ function checkResetButtonActive(check){
 }
 
 function testPeople(x){
-    people = x < 0 ? 0 : x;
+    people = x < 0 ? 0 : (x >= 1000 ? 1000 : x);
 
     inputPeople.value = people;
 
@@ -130,7 +134,7 @@ function testPeople(x){
 }
 
 function testBill(x){
-    bill = x < 0 ? 0 : x;
+    bill = x < 0 ? 0 : (x >= 1000 ? 1000 : x);
 
     inputBill.value = bill;
 
