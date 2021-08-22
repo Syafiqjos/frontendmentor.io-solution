@@ -9,9 +9,13 @@ const tipCustom = document.getElementById('calculator-tip-custom');
 const tipsList = document.querySelectorAll('.calculator__tip-btn');
 const resetButton = document.getElementById('reset-button');
 
+const resultPersonTipAmount = document.getElementById('result-person-tip-amount');
+const resultPersonTotal = document.getElementById('result-person-total');
+
 // START
 let bill = 0;
 let people = 0;
+let tip = 0;
 
 initializeTipsList();
 initializeTipCustom();
@@ -25,21 +29,28 @@ clearTipsList();
 // END HOIST
 
 function initializeTipsList(){
-    tipsList.forEach(function(tip, index) {
-        tip.addEventListener('click', function() {
+    tipsList.forEach(function(tipElement, index) {
+        tipElement.addEventListener('click', function() {
             clearTipsList();
             this.classList.add('calculator__tip-btn--active');
 
             tipCustom.value = '';
             checkResetButtonActive(true);
+
+            tip = this.dataset['percentage'];
+            refreshResult();
         });
     });
 }
 
 function initializeTipCustom(){
-    tipCustom.addEventListener('input', () => {
+    tipCustom.addEventListener('input', function() {
         clearTipsList();
         checkResetButtonActive(true);
+
+        tip = this.value;
+
+        refreshResult();
     });
 }
 
@@ -48,6 +59,7 @@ function initializeInputBill(){
         checkResetButtonActive(true);
 
         testBill(this.value);
+        refreshResult();
     });
 }
 
@@ -56,16 +68,24 @@ function initializeInputPeople(){
         checkResetButtonActive(true);
 
         testPeople(this.value);
+        refreshResult();
     });
 }
 
 function initializeResetButton(){
     resetButton.addEventListener('click', () => {
         clearTipsList();
+        
+        tip = 0;
+        people = 0;
+        bill = 0;
+
         tipCustom.value = '';
         inputBill.value = '';
         inputPeople.value = '';
+        
         checkResetButtonActive(false);
+        refreshResult();
     });
 }
 
@@ -119,4 +139,25 @@ function testBill(x){
     } else {
         inputBillParent.classList.remove('calculator__input--error');
     }
+}
+
+function refreshResult(){
+    let tp = countPersonTipAmount();
+    let cp = countPersonTotal();
+
+    if (Number.isFinite(tp) && Number.isFinite(cp)){
+        resultPersonTipAmount.innerText = '$' + tp;
+        resultPersonTotal.innerText = '$' + cp;
+    } else {
+        resultPersonTipAmount.innerText = '$-.--';
+        resultPersonTotal.innerText = '$-.--';
+    }
+}
+
+function countPersonTipAmount(){
+    return Math.round(bill * tip / 100 / people * 100) / 100;
+}
+
+function countPersonTotal(){
+    return Math.round((bill + bill * tip / 100) / people * 100) / 100;
 }

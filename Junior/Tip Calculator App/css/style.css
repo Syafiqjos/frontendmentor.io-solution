@@ -224,6 +224,7 @@ main {
   font-size: 2.4rem;
   font-weight: 600;
   grid-area: price;
+  text-align: right;
   color: var(--primary-color-1);
 }
 .calculator__result-btn {
