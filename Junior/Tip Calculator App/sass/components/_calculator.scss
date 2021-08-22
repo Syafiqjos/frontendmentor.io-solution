@@ -119,6 +119,16 @@
 
         outline-color: $neutral-color-4-sat;
         outline-width: 2px;
+
+        ::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+        &[type=number] {
+        -moz-appearance: textfield;
+        }
     }
 
     &__tip-btn-container {
@@ -178,8 +188,20 @@
         outline-color: $neutral-color-4-sat;
         outline-width: 2px;
 
+        text-align: right;
+
         &--error {
             outline-color: $error-color;
+        }
+
+        ::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+        &[type=number] {
+        -moz-appearance: textfield;
         }
     }
 

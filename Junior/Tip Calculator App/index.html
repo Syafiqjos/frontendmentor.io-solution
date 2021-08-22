@@ -7,6 +7,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
+
+  <script defer src="./js/script.js"></script>
   
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
@@ -19,25 +21,25 @@
           <label class="calculator__label" for="calculator-bill">Bill</label>
           <div class="calculator__input">
               <span class="calculator__input-sign calculator__input-sign--dollars"></span>
-            <input class="calculator__input-field" type="text" id="calculator-bill" placeholder="0" />
+            <input class="calculator__input-field" type="number" id="calculator-bill" placeholder="0" />
           </div>
         </div>
         <div class="calculator__control-item">
           <label class="calculator__label" for="calculator-tip-custom">Select Tip %</label>
           <div class="calculator__tip-btn-container">
-            <button class="calculator__tip-btn">5%</button>
-            <button class="calculator__tip-btn calculator__tip-btn--active">10%</button>
-            <button class="calculator__tip-btn">15%</button>
-            <button class="calculator__tip-btn">25%</button>
-            <button class="calculator__tip-btn">50%</button>
-            <input class="calculator__tip-input" type="text" id="calculator-tip-custom" placeholder="Custom" />
+            <button class="calculator__tip-btn" data-percentage="5">5%</button>
+            <button class="calculator__tip-btn calculator__tip-btn--active" data-percentage="10">10%</button>
+            <button class="calculator__tip-btn" data-percentage="15">15%</button>
+            <button class="calculator__tip-btn" data-percentage="25">25%</button>
+            <button class="calculator__tip-btn" data-percentage="50">50%</button>
+            <input class="calculator__tip-input" type="number" id="calculator-tip-custom" placeholder="Custom" />
           </div>
         </div>
         <div class="calculator__control-item">
           <label class="calculator__label" for="calculator-people">Number of People</label>
           <div class="calculator__input calculator__input--error">
             <span class="calculator__input-sign calculator__input-sign--people"></span>
-            <input class="calculator__input-field" type="text" id="calculator-people" placeholder="0" />
+            <input class="calculator__input-field" type="number" id="calculator-people" placeholder="0" />
           </div>
         </div>
       </div>
@@ -52,7 +54,7 @@
           <div class="calculator__result-subtitle">/ person</div>
           <div class="calculator__result-price">$0.00</div>
         </div>
-        <button class="calculator__result-btn calculator__result-btn--disabled">
+        <button id="reset-button" class="calculator__result-btn">
           Reset
         </button>
       </div>
