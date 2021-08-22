@@ -59,6 +59,7 @@ main {
   background-color: var(--neutral-color-6);
   color: var(--neutral-color-2);
   border-radius: 1rem;
+  margin-bottom: 4rem;
   padding: 2rem;
   font-family: "Space Mono", monospace;
   width: 90%;
@@ -288,6 +289,7 @@ main {
   }
 }
 .logo-splitter {
+  margin-top: 4rem;
   margin-bottom: 4rem;
 }
 

@@ -102,6 +102,6 @@ If I have time, I would like to give an linear interpolation animation on the Ti
 
 Thank you to Dev Ed who make a great sass introduction.
 
-And to Kevin Powel videos about sass file organization.
+And to Kevin Powell videos about sass file organization.
 
 Also thank you to frontendmentor.io community!
