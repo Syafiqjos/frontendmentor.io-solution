@@ -1,3 +1,4 @@
-@forward "colors";
-@forward "fonts";
-@forward "resets";
+@import "colors";
+@import "fonts";
+@import "root";
+@import "resets";
