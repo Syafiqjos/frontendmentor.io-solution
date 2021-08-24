@@ -2,3 +2,15 @@
 
 $font-barlow: 'Barlow', sans-serif;
 $font-fraunces: 'Fraunces', serif;
+
+.font-barlow {
+    font-family: $font-barlow;
+}
+
+.font-fraunces {
+    font-family: $font-fraunces;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}

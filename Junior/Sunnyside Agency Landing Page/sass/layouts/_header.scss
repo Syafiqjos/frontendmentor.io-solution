@@ -1,7 +1,93 @@
-header {
+.header {
+    display: grid;
+
+    grid-template-rows: 100px 100px minmax(200px, 50%);
+
     min-height: 100vh;
+
+    position: relative;
 
     background-image: var(--data-image-src);
     background-size: cover;
     background-position-x: center;
+    background-position-y: bottom;
+
+    &__nav {
+        @include flex-row;
+    }
+
+    &__logo {
+        padding: $size-l;
+    }
+
+    &__list-container {
+        @include flex-row;
+        @include list-items;
+
+        padding-right: $size-l;
+
+        & li {
+            & a {
+                padding: 0.8rem $size-l;
+
+                border-radius: 1.5rem;
+
+                font-size: $size-m;
+                font-family: $font-barlow;
+
+                text-decoration: none;
+
+                color: $neutral-color-5;
+
+                &:hover, &:focus {
+                    background-color: rgba(white, 0.25);
+                }
+
+                &:active {
+                    background-color: white;
+                    color: $neutral-color-1;
+                }
+
+                outline: none;
+            }
+        }
+    }
+
+    &__motto {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+
+        width: 90%;
+
+        font-family: $font-fraunces;
+        font-size: $size-l;
+        
+        text-align: center;
+        text-transform: uppercase;
+
+        letter-spacing: $size-xs;
+
+        color: $neutral-color-5;
+
+        transform: translate(-50%, -50%);
+
+        transition: font-size 0.5s ease-out;
+
+        @media screen and (max-width: $screen-medium){
+            font-size: 1.8rem;
+        }
+
+        @media screen and (max-width: $screen-small){
+            font-size: 1.2rem;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%) scale(0.5);
+    }
 }

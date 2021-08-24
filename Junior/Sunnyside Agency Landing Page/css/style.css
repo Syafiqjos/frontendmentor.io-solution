@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+.font-barlow {
+  font-family: "Barlow", sans-serif;
+}
+
+.font-fraunces {
+  font-family: "Fraunces", serif;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 :root {
   --primary-color-1: hsl(7, 99%, 70%);
   --primary-color-2: hsl(51, 100%, 49%);
@@ -25,11 +37,112 @@ body {
   font-size: 18px;
 }
 
-header {
+.grid-section {
+  display: grid;
+}
+.grid-section--full {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: "left";
+}
+.grid-section--dual {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "left right";
+}
+.grid-section--four {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "left mid-left mid-right right";
+}
+.grid-section__left {
+  grid-area: left;
+}
+.grid-section__mid-left {
+  grid-area: mid-left;
+}
+.grid-section__mid-right {
+  grid-area: mid-right;
+}
+.grid-section__right {
+  grid-area: right;
+}
+
+.spacer__vertical {
+  margin-bottom: auto;
+}
+.spacer__horizontal {
+  margin-right: auto;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 100px 100px minmax(200px, 50%);
   min-height: 100vh;
+  position: relative;
   background-image: var(--data-image-src);
   background-size: cover;
   background-position-x: center;
+  background-position-y: bottom;
+}
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header__logo {
+  padding: 2rem;
+}
+.header__list-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  text-decoration: none;
+  padding-right: 2rem;
+}
+.header__list-container li a {
+  padding: 0.8rem 2rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  font-family: "Barlow", sans-serif;
+  text-decoration: none;
+  color: var(--neutral-color-5);
+  outline: none;
+}
+.header__list-container li a:hover, .header__list-container li a:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.header__list-container li a:active {
+  background-color: white;
+  color: var(--neutral-color-1);
+}
+.header__motto {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 90%;
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: var(--neutral-color-5);
+  transform: translate(-50%, -50%);
+  transition: font-size 0.5s ease-out;
+}
+@media screen and (max-width: 640px) {
+  .header__motto {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .header__motto {
+    font-size: 1.2rem;
+  }
+}
+.header__arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,16 +14,18 @@
 </head>
 <body>
   <header class="header" style="--data-image-src:url('../images/desktop/image-header.jpg');">
-    <img class="header__logo" src="./images/logo.svg" alt="">
     <nav class="header__nav">
+      <img class="header__logo" src="./images/logo.svg" alt="">
+      <div class="spacer__horizontal"></div>
       <ul class="header__list-container">
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a class="font-fraunces text-uppercase" href="#">Contact</a></li>
       </ul>
     </nav>
     <h1 class="header__motto">We are creatives</h1>
+    <img class="header__arrow" src="./images/icon-arrow-down.svg" alt="" role="presentation" aria-hidden="true" />
   </header>
   <main>
     <section class="grid-section grid-section--dual">
@@ -35,14 +37,12 @@
         </p>
         <a href="#" class="article__link">Learn more</a>
       </article>
-      <div class="cover grid-section__right">
-        <img class="cover__image" src="./images/desktop/image-transform.jpg" alt="">
+      <div style="--data-image-src:url('../images/desktop/image-header.jpg');" class="cover grid-section__right">
       </div>
     </section>
 
     <section class="grid-section grid-section--dual">
-      <div class="cover grid-section__left">
-        <img class="cover__image" src="./images/desktop/image-stand-out.jpg" alt="">
+      <div style="--data-image-src:url('../images/desktop/image-stand-out.jpg');" class="cover grid-section__left">
       </div>
       <article class="article grid-section__right">
         <h2 class="article__title">Stand out to the right audience</h2>
@@ -54,12 +54,12 @@
     </section>
 
     <section class="grid-section grid-section--dual">
-      <div class="cover grid-section__left">
+      <div style="--data-image-src:url('../images/desktop/image-graphic-design.jpg');" class="cover grid-section__left">
           <div class="spacer__vertical"></div>
           <h3>Graphic design</h3>
           <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
       </div>
-      <div class="cover grid-section__right">
+      <div style="--data-image-src:url('../images/desktop/image-photography.jpg');" class="cover grid-section__right">
           <div class="spacer__vertical"></div>
           <h3>Photography</h3>
           <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
@@ -67,7 +67,7 @@
     </section>
 
     <section class="grid-section grid-section--full">
-      <div class="testimonials">
+      <div class="testimonials grid-section__left">
         <div class="testimonials__title">
           Client testimonials
         </div>
@@ -97,10 +97,10 @@
   </main>
   <footer>
     <div class="grid-section grid-section--four">
-      <div data-src="" class="cover"></div>
-      <div data-src="" class="cover"></div>
-      <div data-src="" class="cover"></div>
-      <div data-src="" class="cover"></div>
+      <div style="--data-image-src:url('../images/desktop/image-gallery-milkbottles.jpg');" class="grid-section__left cover"></div>
+      <div style="--data-image-src:url('../images/desktop/image-gallery-orange.jpg');" class="grid-section__mid-leftcover"></div>
+      <div style="--data-image-src:url('../images/desktop/image-gallery-cone.jpg');" class="grid-section__mid-rightcover"></div>
+      <div style="--data-image-src:url('../images/desktop/image-gallery-sugarcubes.jpg');" class="grid-section__rightcover"></div>
     </div>
     <div class="footer">
         <img class="footer__logo" src="./images/logo.svg" alt="">
