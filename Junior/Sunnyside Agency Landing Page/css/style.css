@@ -145,4 +145,21 @@ body {
   transform: translate(-50%, -50%) scale(0.5);
 }
 
+body {
+  background-color: #98e3ff;
+}
+
+.main {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-shadow: 0 0 50px #3ebfff;
+}
+
+.cover {
+  background-image: var(--data-image-src);
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+}
+
 /*# sourceMappingURL=style.css.map */
