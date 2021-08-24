@@ -25,4 +25,11 @@ body {
   font-size: 18px;
 }
 
+header {
+  min-height: 100vh;
+  background-image: var(--data-image-src);
+  background-size: cover;
+  background-position-x: center;
+}
+
 /*# sourceMappingURL=style.css.map */
