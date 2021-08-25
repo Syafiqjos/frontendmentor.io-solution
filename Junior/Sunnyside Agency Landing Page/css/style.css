@@ -194,7 +194,7 @@ body {
 .article__content {
   margin-bottom: 2rem;
   font-family: "Barlow", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--neutral-color-3);
 }
 .article__link {
@@ -245,7 +245,26 @@ body {
   background-image: var(--data-image-src);
   background-size: cover;
   background-position: center;
+  padding: 2rem;
   min-height: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cover h3 {
+  margin-bottom: 2rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--primary-color-3);
+}
+.cover p {
+  margin-bottom: 2rem;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--primary-color-4);
 }
 
 /*# sourceMappingURL=style.css.map */
