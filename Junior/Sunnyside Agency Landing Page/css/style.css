@@ -163,9 +163,13 @@ body {
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.1);
     padding: 1.2rem;
     width: 80%;
     background-color: white;
+  }
+  .header__list-container--hidden {
+    display: none !important;
   }
   .header__list-container::before {
     content: "";
@@ -226,11 +230,15 @@ body {
   padding: 2rem;
   font-size: 2rem;
   color: white;
+  outline: none;
 }
 @media screen and (min-width: 640px) {
   .header__toggle {
     display: none !important;
   }
+}
+.header__toggle:hover, .header__toggle:active, .header__toggle:focus {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .footer {
