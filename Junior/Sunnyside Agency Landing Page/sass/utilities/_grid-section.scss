@@ -40,26 +40,26 @@
 
     @media screen and (max-width: $screen-medium){
         &--full {
-            grid-template-columns: 1fr;
+            grid-template-columns: 100%;
             grid-template-areas: 'left';
         }
 
         &--dual {
-            grid-template-columns: 1fr;
+            grid-template-columns: 100%;
             grid-template-areas: 'left' 'right';
         }
 
         &--dual-swap {
-            grid-template-columns: 1fr;
+            grid-template-columns: 100%;
             grid-template-areas: 'right' 'left';
         }
 
         &--four {
-            grid-template-columns: 50%;
+            grid-template-columns: 50% 50%;
             grid-template-areas: 'left mid-left' 'mid-right right';
 
             & > * {
-                min-width: 50vw !important;
+                min-width: 50% !important;
                 min-height: 50vw !important;
             }
         }

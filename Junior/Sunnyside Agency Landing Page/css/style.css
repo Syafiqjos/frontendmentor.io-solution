@@ -70,23 +70,23 @@ body {
 }
 @media screen and (max-width: 640px) {
   .grid-section--full {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-areas: "left";
   }
   .grid-section--dual {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-areas: "left" "right";
   }
   .grid-section--dual-swap {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-areas: "right" "left";
   }
   .grid-section--four {
-    grid-template-columns: 50%;
+    grid-template-columns: 50% 50%;
     grid-template-areas: "left mid-left" "mid-right right";
   }
   .grid-section--four > * {
-    min-width: 50vw !important;
+    min-width: 50% !important;
     min-height: 50vw !important;
   }
 }
