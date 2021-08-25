@@ -1,0 +1,66 @@
+.footer {
+    background-color: hsl(168, 44%, 74%);
+    color: $primary-color-5;
+
+    @include flex-column;
+
+    align-items: center;
+
+
+    & a {
+        color: $primary-color-5;
+        text-decoration: none;
+    }
+
+    &__logo {
+        margin-top: 4rem;
+    }
+
+    &__nav {
+        margin-top: 4rem;
+    }
+
+    &__list-container {
+        @include flex-row;
+        @include list-items;
+
+        gap: 2rem;
+
+        color: $primary-color-5;
+    }
+
+    &__social {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    &__social-container {
+        @include flex-row;
+        @include list-items;
+
+        gap: 1rem;
+        
+        color: $primary-color-5;
+    }
+}
+
+.attribution {
+    background-color: $primary-color-5;
+
+    padding: 1.5rem;
+
+    font-family: $font-fraunces;
+    font-size: 1.2rem;
+
+    text-align: center;
+    
+    color: hsl(168, 44%, 74%);
+
+    & a {
+        color: white;
+        text-decoration: none;
+
+        font-family: $font-fraunces;
+        font-size: 1.2rem;
+    }
+}
