@@ -26,6 +26,10 @@
 
         padding-right: $size-l;
 
+        @media screen and (max-width: $screen-medium){
+            display: none;
+        }
+
         & li {
             & a {
                 padding: 0.8rem $size-l;

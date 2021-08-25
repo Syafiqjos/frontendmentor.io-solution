@@ -55,8 +55,13 @@
         }
 
         &--four {
-            grid-template-columns: 1fr;
-            grid-template-areas: 'left' 'mid-left' 'mid-right' 'right';
+            grid-template-columns: 50%;
+            grid-template-areas: 'left mid-left' 'mid-right right';
+
+            & > * {
+                min-width: 50vw !important;
+                min-height: 50vw !important;
+            }
         }
     }
 }
