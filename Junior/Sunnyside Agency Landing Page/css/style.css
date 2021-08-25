@@ -276,4 +276,67 @@ body {
   color: var(--primary-color-4);
 }
 
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 2rem;
+}
+@media screen and (max-width: 1000px) {
+  .testimonials {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.testimonials__cover {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-image: var(--data-image-src);
+  background-size: cover;
+}
+.testimonials__title {
+  font-family: "Fraunces", serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+  color: var(--neutral-color-4);
+}
+.testimonials__card-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 0rem;
+}
+@media screen and (max-width: 840px) {
+  .testimonials__card-list {
+    flex-direction: column;
+  }
+}
+.testimonials__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  padding: 2rem;
+}
+.testimonials__content {
+  margin: 2rem;
+  text-align: center;
+  color: var(--neutral-color-2);
+}
+.testimonials__writer {
+  font-family: "Fraunces", serif;
+  font-size: 1.2rem;
+  margin: 1rem;
+  color: var(--neutral-color-1);
+  text-align: center;
+}
+.testimonials__prof {
+  color: var(--neutral-color-4);
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

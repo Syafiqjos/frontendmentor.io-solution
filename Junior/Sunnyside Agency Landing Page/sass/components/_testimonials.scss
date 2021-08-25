@@ -1,0 +1,75 @@
+.testimonials {
+    @include flex-column;
+
+    padding: 8rem 2rem;
+
+    @media screen and (max-width: 1000px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__cover {
+        width: 64px;
+        height: 64px;
+
+        border-radius: 50%;
+
+        background-image: var(--data-image-src);
+        background-size: cover;
+    }
+
+    &__title {
+        font-family: $font-fraunces;
+        font-size: 1.2rem;
+
+        text-transform: uppercase;
+        text-align: center;
+
+        letter-spacing: 4px;
+
+        color: $neutral-color-4;
+    }
+
+    &__card-list {
+        @include flex-row;
+
+        padding-top: 2rem;
+        padding-bottom: 0rem;
+
+        @media screen and (max-width: 840px) {
+            flex-direction: column;
+        }
+    }
+
+    &__card {
+        @include flex-column;
+        align-items: center;
+
+        padding: 2rem;
+    }
+
+    &__content {
+        margin: 2rem;
+
+        text-align: center;
+
+        color: $neutral-color-2;
+    }
+
+    &__writer {
+        font-family: $font-fraunces;
+        font-size: 1.2rem;
+
+        margin: 1rem;
+
+        color: $neutral-color-1;
+
+        text-align: center;
+    }
+
+    &__prof {
+        color: $neutral-color-4;
+
+        text-align: center;
+    }
+}
