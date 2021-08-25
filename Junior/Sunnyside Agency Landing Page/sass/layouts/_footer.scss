@@ -17,7 +17,7 @@
     }
 
     &__nav {
-        margin-top: 4rem;
+        margin-top: 2rem;
     }
 
     &__list-container {
@@ -27,6 +27,10 @@
         gap: 2rem;
 
         color: $primary-color-5;
+
+        & a:hover, & a:focus {
+            color: white;
+        }
     }
 
     &__social {
@@ -41,6 +45,10 @@
         gap: 1rem;
         
         color: $primary-color-5;
+
+        & a:hover, & a:focus {
+            color: white;
+        }
     }
 }
 
@@ -62,5 +70,13 @@
 
         font-family: $font-fraunces;
         font-size: 1.2rem;
+    }
+
+    @media screen and (max-width: $screen-medium){
+        font-size: 1.0rem;
+
+        & a { 
+            font-size: 1.0rem;
+        }
     }
 }

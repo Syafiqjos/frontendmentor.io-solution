@@ -103,8 +103,11 @@ body {
   grid-template-rows: 100px 100px minmax(200px, 50%);
   min-height: 100vh;
   position: relative;
+  background-color: #3ebfff;
   background-image: var(--data-image-src);
+  background-repeat: no-repeat;
   background-size: cover;
+  background-size: min(1440px, 200%);
   background-position-x: center;
   background-position-y: bottom;
 }
@@ -151,7 +154,7 @@ body {
   left: 50%;
   width: 90%;
   font-family: "Fraunces", serif;
-  font-size: 2rem;
+  font-size: 3.2rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
@@ -161,19 +164,14 @@ body {
 }
 @media screen and (max-width: 640px) {
   .header__motto {
-    font-size: 1.8rem;
-  }
-}
-@media screen and (max-width: 320px) {
-  .header__motto {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
   }
 }
 .header__arrow {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .footer {
@@ -192,7 +190,7 @@ body {
   margin-top: 4rem;
 }
 .footer__nav {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 .footer__list-container {
   display: flex;
@@ -202,6 +200,9 @@ body {
   text-decoration: none;
   gap: 2rem;
   color: var(--primary-color-5);
+}
+.footer__list-container a:hover, .footer__list-container a:focus {
+  color: white;
 }
 .footer__social {
   margin-top: 4rem;
@@ -215,6 +216,9 @@ body {
   text-decoration: none;
   gap: 1rem;
   color: var(--primary-color-5);
+}
+.footer__social-container a:hover, .footer__social-container a:focus {
+  color: white;
 }
 
 .attribution {
@@ -230,6 +234,14 @@ body {
   text-decoration: none;
   font-family: "Fraunces", serif;
   font-size: 1.2rem;
+}
+@media screen and (max-width: 640px) {
+  .attribution {
+    font-size: 1rem;
+  }
+  .attribution a {
+    font-size: 1rem;
+  }
 }
 
 body {
@@ -280,6 +292,7 @@ body {
   height: 5px;
   z-index: 10;
   background-color: var(--primary-color-2);
+  background-color: var(--hover-color);
   border-radius: 20px;
   transition: right ease-out 0.5s;
   outline: none;

@@ -47,6 +47,7 @@
             z-index: 10;
 
             background-color: $primary-color-2;
+            background-color: var(--hover-color);
             border-radius: 20px;
 
             transition: right ease-out 0.5s;
