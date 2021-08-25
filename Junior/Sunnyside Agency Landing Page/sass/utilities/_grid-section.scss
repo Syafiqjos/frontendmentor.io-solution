@@ -11,6 +11,11 @@
         grid-template-areas: 'left right';
     }
 
+    &--dual-swap {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 'left right';
+    }
+
     &--four {
         grid-template-columns: repeat(4, 1fr);
 
@@ -31,5 +36,27 @@
 
     &__right {
         grid-area: right;
+    }
+
+    @media screen and (max-width: $screen-medium){
+        &--full {
+            grid-template-columns: 1fr;
+            grid-template-areas: 'left';
+        }
+
+        &--dual {
+            grid-template-columns: 1fr;
+            grid-template-areas: 'left' 'right';
+        }
+
+        &--dual-swap {
+            grid-template-columns: 1fr;
+            grid-template-areas: 'right' 'left';
+        }
+
+        &--four {
+            grid-template-columns: 1fr;
+            grid-template-areas: 'left' 'mid-left' 'mid-right' 'right';
+        }
     }
 }

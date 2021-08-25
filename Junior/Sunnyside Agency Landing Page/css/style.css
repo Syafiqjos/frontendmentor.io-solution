@@ -48,6 +48,10 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "left right";
 }
+.grid-section--dual-swap {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "left right";
+}
 .grid-section--four {
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "left mid-left mid-right right";
@@ -63,6 +67,24 @@ body {
 }
 .grid-section__right {
   grid-area: right;
+}
+@media screen and (max-width: 640px) {
+  .grid-section--full {
+    grid-template-columns: 1fr;
+    grid-template-areas: "left";
+  }
+  .grid-section--dual {
+    grid-template-columns: 1fr;
+    grid-template-areas: "left" "right";
+  }
+  .grid-section--dual-swap {
+    grid-template-columns: 1fr;
+    grid-template-areas: "right" "left";
+  }
+  .grid-section--four {
+    grid-template-columns: 1fr;
+    grid-template-areas: "left" "mid-left" "mid-right" "right";
+  }
 }
 
 .spacer__vertical {
@@ -155,11 +177,75 @@ body {
   box-shadow: 0 0 50px #3ebfff;
 }
 
+.page {
+  background-color: var(--neutral-color-5);
+}
+
+.article {
+  padding: 8rem;
+}
+.article__title {
+  margin-bottom: 2rem;
+  font-family: "Fraunces", serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--neutral-color-1);
+}
+.article__content {
+  margin-bottom: 2rem;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  color: var(--neutral-color-3);
+}
+.article__link {
+  position: relative;
+  margin-bottom: 2rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--neutral-color-1);
+}
+.article__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 5px;
+  z-index: 10;
+  background-color: var(--primary-color-2);
+  border-radius: 20px;
+  transition: right ease-out 0.5s;
+  outline: none;
+}
+.article__link:hover::before, .article__link:focus::before {
+  right: 0;
+}
+@media screen and (max-width: 1000px) {
+  .article {
+    padding: 4rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .article__title {
+    text-align: center;
+  }
+  .article__content {
+    text-align: center;
+  }
+  .article__link {
+    text-align: center;
+  }
+}
+
 .cover {
   background-image: var(--data-image-src);
   background-size: cover;
   background-position: center;
-  min-height: 400px;
+  min-height: 640px;
 }
 
 /*# sourceMappingURL=style.css.map */
