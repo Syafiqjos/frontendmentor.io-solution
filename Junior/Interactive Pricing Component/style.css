@@ -27,6 +27,93 @@
 }
 
 /* Main */
+main {
+    min-height: 100vh;
+
+    background-color: var(--neutral-color-2);
+}
+
+/* Pricing Header */
+.pricing-header {
+    
+}
+
+.pricing-header__title {
+    
+}
+
+.pricing-header__subtitle {
+    
+}
+
+.pricing-header__circle-big {
+    
+}
+
+.pricing-header__circle-small {
+    
+}
+
+/* Pricing Modal */
+.pricing-modal {
+    
+}
+
+.pricing-modal__page-views {
+    
+}
+
+.pricing-modal__price {
+    
+}
+
+.pricing-modal__price-count {
+    
+}
+
+.pricing-modal__slider-bar {
+    
+}
+
+.pricing-modal__options {
+    
+}
+
+.pricing-modal__options-container {
+    
+}
+
+.pricing-modal__options-item {
+    
+}
+
+.pricing-modal__options-info {
+    
+}
+
+.pricing-modal__benefits {
+    
+}
+
+.pricing-modal__list-container {
+    
+}
+
+.pricing-modal__list-item {
+    
+}
+
+.pricing-modal__confirmation {
+    
+}
+
+.pricing-modal__btn {
+    
+}
+
+.pricing-modal__btn--primary {
+    
+}
 
 /* Footer */
 
