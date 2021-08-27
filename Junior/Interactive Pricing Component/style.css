@@ -26,93 +26,249 @@
     box-sizing: border-box;
 }
 
+/* Layout */
+body {
+    margin: 0;
+    padding: 0;
+    
+    background-color: var(--neutral-color-2);
+    background-image: url('./images/bg-pattern.svg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
 /* Main */
 main {
     min-height: 100vh;
-
-    background-color: var(--neutral-color-2);
 }
 
 /* Pricing Header */
 .pricing-header {
-    
+    position: relative;
+
+    margin: 2rem auto;
+    padding: 1rem;
+
+    background-image: url('./images/pattern-circles.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    text-align: center;
 }
 
 .pricing-header__title {
-    
+    margin: 0.5rem;
+
+    font-size: 2rem;
+    font-weight: 800;
+
+    color: var(--neutral-color-6);
 }
 
 .pricing-header__subtitle {
-    
-}
+    margin: 0.5rem;
 
-.pricing-header__circle-big {
-    
-}
+    font-size: 1rem;
+    font-weight: 600;
 
-.pricing-header__circle-small {
-    
+    color: var(--neutral-color-5);
 }
 
 /* Pricing Modal */
 .pricing-modal {
-    
+    display: grid;
+    grid-template-areas: 
+        "page-views price"
+        "slider slider"
+        "options options"
+        "benefits confirmations";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 75px 50px 50px 75px;
+
+    margin: 1rem auto;
+    padding: 2rem;
+
+    max-width: 90%;
+    max-width: min(500px, 90%);
+
+    background-color: var(--neutral-color-1);
+
+    border-radius: 1rem;
+
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
 }
 
 .pricing-modal__page-views {
-    
+    grid-area: page-views;
+    align-self: center;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    color: var(--neutral-color-5);
 }
 
 .pricing-modal__price {
-    
+    grid-area: price;
+    align-self: center;
+    justify-self: flex-end;
+
+    color: var(--neutral-color-5);
 }
 
 .pricing-modal__price-count {
+    font-size: 2rem;
+    font-weight: 800;
     
+    color: var(--neutral-color-6);
+}
+
+.pricing-modal__slider {
+    position: relative;
+    
+    grid-area: slider;
 }
 
 .pricing-modal__slider-bar {
+    position: absolute;
+
+    left: 0px;
+    right: 0px;
+
+    top: 50%;
+
+    height: 7px;
     
+    border-radius: 5px;
+
+    transform: translateY(-50%);
+}
+
+.pricing-modal__slider-bar--background {
+    background-color: var(--neutral-color-4);
+}
+
+.pricing-modal__slider-bar--foreground {
+    right: 40%;
+
+    background-color: var(--primary-color-1);
+}
+
+.pricing-modal__slider-node {
+    position: absolute;
+
+    right: 40%;
+    top: 50%;
+
+    border-radius: 50%;
+
+    width: 36px;
+    height: 36px;
+
+    background-color: var(--primary-color-1);
+
+    transform: translate(50%, -50%);
+}
+
+.pricing-modal__slider-node::after {
+    content: url('./images/icon-slider.svg');
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    opacity: 50%;
+
+    transform: translate(-50%, -50%);
 }
 
 .pricing-modal__options {
-    
+    grid-area: options;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .pricing-modal__options-container {
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin: 0 1rem;
 }
 
 .pricing-modal__options-item {
-    
+    font-size: 0.75rem;
+
+    margin-right: 0.75rem;
+
+    color: var(--neutral-color-5);
+}
+
+.pricing-modal__options-switch {
+    font-size: 0.75rem;
+
+    color: var(--neutral-color-5);
 }
 
 .pricing-modal__options-info {
-    
+    font-size: 0.75rem;
+
+    color: var(--neutral-color-5);
 }
 
 .pricing-modal__benefits {
-    
+    grid-area: benefits;
+
+    align-self: center;
+    justify-self: flex-start;
+
+    color: var(--neutral-color-5);
 }
 
 .pricing-modal__list-container {
-    
+    color: var(--neutral-color-5);
+
+    list-style: none;
 }
 
 .pricing-modal__list-item {
-    
+    font-size: 0.75rem;
+}
+
+.pricing-modal__list-item::before {
+    content: url('./images/icon-check.svg');
+
+    margin-right: 1rem;
 }
 
 .pricing-modal__confirmation {
-    
+    grid-area: confirmations;
+
+    align-self: center;
+    justify-self: flex-end;
 }
 
 .pricing-modal__btn {
-    
+    border-radius: 2rem;
+    border: none;
+
+    font-size: 0.75rem;
+
+    padding: 0.75rem 2rem;
 }
 
 .pricing-modal__btn--primary {
-    
+    color: var(--neutral-color-1);    
+    background-color: var(--neutral-color-6);
 }
 
 /* Footer */
