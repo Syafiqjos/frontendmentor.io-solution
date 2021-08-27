@@ -82,9 +82,10 @@ main {
         "page-views price"
         "slider slider"
         "options options"
+        "hr hr"
         "benefits confirmations";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 75px 50px 50px 75px;
+    grid-template-rows: 75px 50px 50px 1px 75px;
 
     margin: 1rem auto;
     padding: 2rem;
@@ -169,9 +170,16 @@ main {
     width: 36px;
     height: 36px;
 
-    background-color: var(--primary-color-1);
+    background-color: var(--primary-color-2);
+
+    box-shadow: 0 10px 20px hsl(174, 86%, 45%, 0.5);
 
     transform: translate(50%, -50%);
+}
+
+.pricing-modal__slider-node:hover {
+    filter: brightness(105%);
+    cursor: pointer;
 }
 
 .pricing-modal__slider-node::after {
@@ -182,7 +190,7 @@ main {
     left: 50%;
     top: 50%;
 
-    opacity: 50%;
+    opacity: 70%;
 
     transform: translate(-50%, -50%);
 }
@@ -214,21 +222,81 @@ main {
 }
 
 .pricing-modal__options-switch {
+    position: relative;
+
     font-size: 0.75rem;
 
-    color: var(--neutral-color-5);
+    width: 50px;
+    height: 24px;
+
+    border: none;
+    border-radius: 20px;
+
+    background-color: var(--neutral-color-4);
+}
+
+.pricing-modal__options-switch--active {
+    background-color: var(--primary-color-1);
+}
+
+.pricing-modal__options-switch:hover {
+    filter: brightness(105%);
+    cursor: pointer;
+}
+
+.pricing-modal__options-switch::after {
+    content: '';
+
+    position: absolute;
+
+    display: block;
+
+    background-color: var(--neutral-color-1);
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-130%, -50%);
+    transition: transform;
+}
+
+.pricing-modal__options-switch--active::after {
+    transform: translate(30%, -50%);
 }
 
 .pricing-modal__options-info {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
 
     color: var(--neutral-color-5);
+
+    padding: 0.25rem 0.5rem;
+
+    border-radius: 1rem;
+}
+
+.pricing-modal__options-info--discount {
+    color: var(--primary-color-4);
+    background-color: var(--primary-color-3);
+}
+
+.pricing-modal__hr {
+    grid-area: hr;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--neutral-color-3);
 }
 
 .pricing-modal__benefits {
     grid-area: benefits;
 
-    align-self: center;
+    align-self: flex-end;
     justify-self: flex-start;
 
     color: var(--neutral-color-5);
@@ -247,13 +315,13 @@ main {
 .pricing-modal__list-item::before {
     content: url('./images/icon-check.svg');
 
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
 .pricing-modal__confirmation {
     grid-area: confirmations;
 
-    align-self: center;
+    align-self: flex-end;
     justify-self: flex-end;
 }
 
@@ -269,6 +337,11 @@ main {
 .pricing-modal__btn--primary {
     color: var(--neutral-color-1);    
     background-color: var(--neutral-color-6);
+}
+
+.pricing-modal__btn--primary:hover {
+    filter: brightness(120%);
+    cursor: pointer;
 }
 
 /* Footer */
