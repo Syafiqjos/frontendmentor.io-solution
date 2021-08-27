@@ -2,38 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive pricing component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main>
+    <h1>Simple, traffic-based pricing</h1>
+    <h2>Sign-up for our 30-day trial. No credit card required. </h2>
+    <aside class="pricing-modal">
+      <div class="pricing-modal__page-views">
+        Pageviews
+      </div>
+      <div class="pricing-modal__price">
+        <strong class="pricing-modal__price-count">$ 16.00</strong> / month
+      </div>
+      <div class="pricing-modal__slider-bar"></div>
+      <div class="pricing-modal__options">
+        <span class="pricing-modal__options-item">
+            <span class="pricing-modal__options-item">
+              Monthly Billing
+            </span>
+            <button class="pricing-modal__options-switch"></button>
+        </span>
+        <span class="pricing-modal__options-item">
+            <span class="pricing-modal__options-item">
+                Yearly Billing
+            </span>
+            <span class="pricing-modal__options-info">
+                25% discount
+            </span>
+        </span>
+      </div>
+      <div class="pricing-modal__benefits">
+        <ul class="pricing-modal__list-container">
+          <li class="pricing-modal__list-item">Unlimited websites</li>
+          <li class="pricing-modal__list-item">100% data ownership</li>
+          <li class="pricing-modal__list-item">Email reports</li>
+        </ul>
+      </div>
+      <div class="pricing-modal__confirmation">
+        <button class="pricing-modal__btn pricing-modal__btn--primary">
+          Start my trial
+        </button>
+      </div>
+  </aside>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
 </body>
 </html>
