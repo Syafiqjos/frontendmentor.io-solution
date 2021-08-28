@@ -35,6 +35,8 @@ body {
     background-image: url('./images/bg-pattern.svg');
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: max(1440px, 100%);
 }
 
 /* Main */
@@ -210,7 +212,7 @@ main {
     justify-content: flex-end;
     align-items: center;
 
-    margin: 0 1rem;
+    margin: .25rem 1rem;
 }
 
 .pricing-modal__options-item {
@@ -226,6 +228,7 @@ main {
 
     font-size: 0.75rem;
 
+    min-width: 50px;
     width: 50px;
     height: 24px;
 
@@ -282,6 +285,10 @@ main {
 .pricing-modal__options-info--discount {
     color: var(--primary-color-4);
     background-color: var(--primary-color-3);
+}
+
+.pricing-modal__options-info--discount::after {
+    content: ' discount';
 }
 
 .pricing-modal__hr {
@@ -346,5 +353,113 @@ main {
 
 /* Footer */
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+    background-color: var(--neutral-color-6);
+
+    padding: 1rem;
+
+    font-size: 1.2rem;
+
+    text-align: center;
+    
+    color: var(--neutral-color-1);
+}
+
+.attribution a {
+    color: var(--primary-color-2);
+    text-decoration: none;
+
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 400px){
+    .pricing-header__title {
+        font-size: 1.25rem;
+    }
+
+    .pricing-header__subtitle {
+        font-size: 0.75rem;
+
+        width: 90%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .pricing-modal {
+        display: grid;
+        grid-template-areas: 
+            "page-views page-views"
+            "slider slider"
+            "price price"
+            "options options"
+            "hr hr"
+            "benefits benefits"
+            "confirmations confirmations";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 75px 50px 75px max-content 1px 100px 50px;
+
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .pricing-modal__page-views {
+        text-align: center;
+    }
+
+    .pricing-modal__price, .pricing-modal__price-count {
+        justify-self: center;
+    }
+
+    .pricing-modal__benefits {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .pricing-modal__list-item {
+        text-align: center;
+    }
+
+    .pricing-modal__confirmation {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .pricing-modal__options {
+        flex-direction: column;
+    }
+
+    .pricing-modal__options-item {
+        font-size: 0.7rem;
+    }
+
+    .pricing-modal__options-info--discount::after {
+        content: '';
+    }
+
+    .pricing-modal__btn {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .attribution, .attribution a {
+        font-size: 1.0rem;
+    }
+}
+
+@media screen and (max-width: 200px){
+    .pricing-modal__options-container {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .pricing-modal__options-item {
+        text-align: center;
+
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+
+    .pricing-modal__options-info--discount::after {
+        content: ' discount';
+    }
+}
