@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./style.css">
   
   <title>Frontend Mentor | Interactive pricing component</title>
+
+  <script defer src="./modal.js"></script>
 </head>
 <body>
   <main>
@@ -16,23 +18,24 @@
       <h2 class="pricing-header__subtitle">Sign-up for our 30-day trial. No credit card required. </h2>
     </div>
     <aside class="pricing-modal">
-      <div class="pricing-modal__page-views">
+      <div id="pricing-modal__page-views" class="pricing-modal__page-views">
         100K Pageviews
       </div>
       <div class="pricing-modal__price">
-        <strong class="pricing-modal__price-count">$16.00</strong> / month
+        <strong id="pricing-modal__price-count" class="pricing-modal__price-count">$16.00</strong> / <span id="pricing-modal__price-interval">month</span>
       </div>
       <div class="pricing-modal__slider">
-        <div class="pricing-modal__slider-bar pricing-modal__slider-bar--background"></div>
+          <input id="pricing-modal__slider-bar" type="range" min="0" max="5" class="pricing-modal__slider-bar" value="0" />
+        <!-- <div class="pricing-modal__slider-bar pricing-modal__slider-bar--background"></div>
         <div class="pricing-modal__slider-bar pricing-modal__slider-bar--foreground"></div>
-        <div class="pricing-modal__slider-node"></div>
+        <div id="pricing-modal__slider-bar__slider-node" class="pricing-modal__slider-node"></div> -->
       </div>
       <div class="pricing-modal__options">
         <span class="pricing-modal__options-container">
             <span class="pricing-modal__options-item">
               Monthly Billing
             </span>
-            <button class="pricing-modal__options-switch pricing-modal__options-switch--active"></button>
+            <button id="pricing-modal__options-switch__monthly-billing" class="pricing-modal__options-switch"></button>
         </span>
         <span class="pricing-modal__options-container">
             <span class="pricing-modal__options-item">

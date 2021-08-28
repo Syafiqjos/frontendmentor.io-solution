@@ -137,6 +137,88 @@ main {
 }
 
 .pricing-modal__slider-bar {
+    width: 100%;
+    height: 10px;
+
+    background-color: var(--neutral-color-4);
+
+    border-radius: 5px;
+}
+
+.pricing-modal__slider-bar::-webkit-slider-runnable-track {
+    background-color: var(--primary-color-1);
+
+    background: linear-gradient(90deg, var(--primary-color-1) var(--percentage), var(--neutral-color-4) var(--percentage));
+    height: 100%;
+
+    border-radius: 5px;
+}
+
+.pricing-modal__slider-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+
+    width: 50px;
+    height: 50px;
+
+    content: url('./images/icon-slider.svg');
+
+    background: url('./images/icon-slider.svg') var(--primary-color-2);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    color: red;
+
+    margin-top: -10px;
+
+    padding: 1rem;
+
+    box-shadow: 0 10px 20px hsl(174, 86%, 45%, 0.5);
+
+    border: none;
+    border-radius: 50%;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.pricing-modal__slider-bar:hover::-webkit-slider-thumb {
+    filter: brightness(105%);
+}
+
+.pricing-modal__slider-bar::-moz-range-progress {
+    background-color: var(--primary-color-1);
+    height: 100%;
+
+    border-radius: 5px;
+}
+
+.pricing-modal__slider-bar::-moz-range-thumb {
+    width: 36px;
+    height: 36px;
+
+    content: url('./images/icon-slider.svg');
+
+    background: url('./images/icon-slider.svg') var(--primary-color-2);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    box-shadow: 0 10px 20px hsl(174, 86%, 45%, 0.5);
+
+    border: none;
+    border-radius: 50%;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.pricing-modal__slider-bar:hover::-moz-range-thumb {
+    filter: brightness(105%);
+}
+
+/*
+.pricing-modal__slider-bar {
     position: absolute;
 
     left: 0px;
@@ -196,6 +278,7 @@ main {
 
     transform: translate(-50%, -50%);
 }
+*/
 
 .pricing-modal__options {
     grid-area: options;
@@ -236,6 +319,8 @@ main {
     border-radius: 20px;
 
     background-color: var(--neutral-color-4);
+
+    transition: filter 0.5s;
 }
 
 .pricing-modal__options-switch--active {
@@ -265,7 +350,7 @@ main {
     top: 50%;
 
     transform: translate(-130%, -50%);
-    transition: transform;
+    transition: transform 0.1s;
 }
 
 .pricing-modal__options-switch--active::after {
