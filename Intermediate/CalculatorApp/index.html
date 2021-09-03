@@ -12,19 +12,58 @@
 			href="./images/favicon-32x32.png"
 		/>
 
-		<title>Frontend Mentor | Calculator app</title>
+		<link rel="stylesheet" href="style.css" />
 
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
+		<title>Frontend Mentor | Calculator app</title>
 	</head>
-	<body>
+	<body class="bg-gray-600">
+		<main class="min-h-screen grid place-items-center">
+			<section class="calculator container mx-auto bg-gray-100 p-6">
+				<header class="flex justify-between mb-4">
+					<div>
+						calc
+					</div>
+					<div class="flex items-end">
+						<div class="mr-4">
+							THEME
+						</div>
+						<div class="flex flex-col">
+							<div class="flex justify-between">
+								<span>1</span>
+								<span>2</span>
+								<span>3</span>
+							</div>
+							<div class="bg-gray-900 rounded-2xl w-14 flex items-center justify-start">
+                <div class="bg-red-600 rounded-full w-4 h-4 m-1"></div>
+              </div>
+						</div>
+					</div>
+        </header>
+        <div class="bg-gray-800 rounded p-4 text-right text-white mb-4 text-3xl">
+          <strong>399,981</strong>
+        </div>
+        <div class="bg-gray-600 rounded p-4 text-right text-white text-3xl grid grid-cols-4 grid-rows-5 gap-2">
+          <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">7</div>
+          <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">8</div>
+          <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">9</div>
+		  <div class="bg-gray-400 rounded p-4 font-bold text-center text-2xl grid place-items-center">DEL</div>
+		  <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">4</div>
+          <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">5</div>
+		  <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">6</div>
+		  <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">+</div>
+		  <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">1</div>
+          <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">2</div>
+		  <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">3</div>
+		  <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">-</div>
+		  <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">.</div>
+          <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">0</div>
+		  <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">/</div>
+		  <div class="bg-gray-400 rounded p-4 font-bold text-center text-4xl grid place-items-center">x</div>
+		  <div class="bg-gray-400 rounded p-4 font-bold text-center col-span-2 text-2xl grid place-items-center">RESET</div>
+          <div class="bg-gray-400 rounded p-4 font-bold text-center col-span-2 text-3xl grid place-items-center">=</div>
+        </div>
+			</section>
+		</main>
 		<div class="attribution">
 			Challenge by
 			<a
