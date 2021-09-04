@@ -45,6 +45,10 @@ function updateField(){
 }
 
 function concatNumberToField(concat: string){
+    if (field.search('Infinity') != -1){
+        field = '';
+    }
+
     if (field == '0') {
         field = '';
     }
@@ -58,7 +62,11 @@ function concatNumberToField(concat: string){
 }
 
 function setFieldString(str: string){
-    field = str.toString();
+    if (field.search('Infinity') != -1){
+        field = '';
+    } else {
+        field = str.toString();
+    }
 
     if (field == ''){
         field = '0';
@@ -75,10 +83,12 @@ function initializeNumber(element: HTMLElement, num: string){
 
 function initializeOperator(element: HTMLElement, operator: string){
     element.addEventListener('click', () => {
-        if (field[field.length-1] == ' ') {
-            field = field.substr(0, field.length - 3);
+        if (field != '0' && field != '' && field != 'Infinity'){
+            if (field[field.length-1] == ' ') {
+                field = field.substr(0, field.length - 3);
+            }
+            concatNumberToField(' ' + operator + ' ');
         }
-        concatNumberToField(' ' + operator + ' ');
     });
 }
 

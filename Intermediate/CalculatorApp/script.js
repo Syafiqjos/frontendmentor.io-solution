@@ -36,6 +36,9 @@ function updateField() {
     calcField.scrollLeft = calcField.scrollLeftMax;
 }
 function concatNumberToField(concat) {
+    if (field.search('Infinity') != -1) {
+        field = '';
+    }
     if (field == '0') {
         field = '';
     }
@@ -45,7 +48,12 @@ function concatNumberToField(concat) {
     updateField();
 }
 function setFieldString(str) {
-    field = str.toString();
+    if (field.search('Infinity') != -1) {
+        field = '';
+    }
+    else {
+        field = str.toString();
+    }
     if (field == '') {
         field = '0';
     }
@@ -58,10 +66,12 @@ function initializeNumber(element, num) {
 }
 function initializeOperator(element, operator) {
     element.addEventListener('click', function () {
-        if (field[field.length - 1] == ' ') {
-            field = field.substr(0, field.length - 3);
+        if (field != '0' && field != '' && field != 'Infinity') {
+            if (field[field.length - 1] == ' ') {
+                field = field.substr(0, field.length - 3);
+            }
+            concatNumberToField(' ' + operator + ' ');
         }
-        concatNumberToField(' ' + operator + ' ');
     });
 }
 function initializeFrac(element) {

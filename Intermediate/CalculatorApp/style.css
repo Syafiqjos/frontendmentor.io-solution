@@ -13255,6 +13255,42 @@ video {
   background-color:  var(--color-neutral3);
 }
 
+.active\:bg-primary:active {
+  background-color:  var(--color-primary);
+}
+
+.active\:bg-secondary:active {
+  background-color:  var(--color-secondary);
+}
+
+.active\:bg-ternary:active {
+  background-color:  var(--color-ternary);
+}
+
+.active\:bg-primaryShadow:active {
+  background-color:  var(--color-primary-shadow);
+}
+
+.active\:bg-secondaryShadow:active {
+  background-color:  var(--color-secondary-shadow);
+}
+
+.active\:bg-ternaryShadow:active {
+  background-color:  var(--color-ternary-shadow);
+}
+
+.active\:bg-neutral1:active {
+  background-color:  var(--color-neutral1);
+}
+
+.active\:bg-neutral2:active {
+  background-color:  var(--color-neutral2);
+}
+
+.active\:bg-neutral3:active {
+  background-color:  var(--color-neutral3);
+}
+
 .bg-opacity-0 {
   --tw-bg-opacity:  0;
 }
@@ -31002,6 +31038,42 @@ video {
   }
 
   .sm\:focus\:bg-neutral3:focus {
+    background-color:  var(--color-neutral3);
+  }
+
+  .sm\:active\:bg-primary:active {
+    background-color:  var(--color-primary);
+  }
+
+  .sm\:active\:bg-secondary:active {
+    background-color:  var(--color-secondary);
+  }
+
+  .sm\:active\:bg-ternary:active {
+    background-color:  var(--color-ternary);
+  }
+
+  .sm\:active\:bg-primaryShadow:active {
+    background-color:  var(--color-primary-shadow);
+  }
+
+  .sm\:active\:bg-secondaryShadow:active {
+    background-color:  var(--color-secondary-shadow);
+  }
+
+  .sm\:active\:bg-ternaryShadow:active {
+    background-color:  var(--color-ternary-shadow);
+  }
+
+  .sm\:active\:bg-neutral1:active {
+    background-color:  var(--color-neutral1);
+  }
+
+  .sm\:active\:bg-neutral2:active {
+    background-color:  var(--color-neutral2);
+  }
+
+  .sm\:active\:bg-neutral3:active {
     background-color:  var(--color-neutral3);
   }
 
