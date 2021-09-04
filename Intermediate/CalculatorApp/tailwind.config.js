@@ -1,8 +1,12 @@
 module.exports = {
-  purge: [ 'index.html' ],
+  // purge: [ 'index.html' ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'spartan': [ '"Spartan"', 'sans-serif' ]
+      }
+    },
   },
   variants: {
     extend: {},
