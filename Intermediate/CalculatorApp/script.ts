@@ -21,6 +21,9 @@ let theme : number = 1;
 let field : string = '0';
 
 switcher.addEventListener('click', nextTheme);
+if (localStorage.getItem('theme')) {
+    changeTheme(+localStorage.getItem('theme'));
+}
 
 for (let i = 0; i < 10;i++){
     initializeNumber(calcNum[i], i.toString());
@@ -151,5 +154,8 @@ function nextTheme(){
 }
 
 function changeTheme(theme: number){
-    document.documentElement.className = "theme" + theme;
+    const newTheme = "theme" + theme;
+    document.documentElement.className = newTheme;
+
+    localStorage.setItem('theme', theme.toString())
 }
