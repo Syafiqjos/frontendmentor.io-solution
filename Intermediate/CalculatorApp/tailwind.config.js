@@ -14,6 +14,7 @@ module.exports = {
       neutral3: 'var(--color-neutral3)'
     },
     textColor: {
+      header: 'var(--color-header)',
       primary: 'var(--color-text1)',
       secondary: 'var(--color-text2)'
     },

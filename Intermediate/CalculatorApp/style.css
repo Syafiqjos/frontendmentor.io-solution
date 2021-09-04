@@ -8,11 +8,24 @@
   --color-neutral1: hsl(224, 36%, 15%);
   --color-neutral2: hsl(223, 31%, 20%);
   --color-neutral3: hsl(222, 26%, 31%);
+  --color-header: hsl(0, 100%, 100%);
   --color-text1: hsl(0, 100%, 100%);
   --color-text2: hsl(221, 14%, 31%);
 }
 
 :root.theme2 {
+  --color-primary:  hsl(25, 98%, 40%);
+  --color-secondary: hsl(185, 42%, 37%);
+  --color-ternary: hsl(45, 7%, 89%);
+  --color-primary-shadow:  hsl(25, 99%, 27%);
+  --color-secondary-shadow: hsl(185, 58%, 25%);
+  --color-ternary-shadow: hsl(35, 11%, 61%);
+  --color-neutral1: hsl(0, 0%, 93%);
+  --color-neutral2: hsl(0, 5%, 81%);
+  --color-neutral3: hsl(0, 0%, 90%);
+  --color-header: hsl(60, 10%, 19%);
+  --color-text1: hsl(0, 100%, 100%);
+  --color-text2: hsl(60, 10%, 19%);
 }
 
 :root.theme3 {
@@ -15501,12 +15514,20 @@ video {
   letter-spacing:  0.1em;
 }
 
+.text-header {
+  color:  var(--color-header);
+}
+
 .text-primary {
   color:  var(--color-text1);
 }
 
 .text-secondary {
   color:  var(--color-text2);
+}
+
+.group:hover .group-hover\:text-header {
+  color:  var(--color-header);
 }
 
 .group:hover .group-hover\:text-primary {
@@ -15517,6 +15538,10 @@ video {
   color:  var(--color-text2);
 }
 
+.focus-within\:text-header:focus-within {
+  color:  var(--color-header);
+}
+
 .focus-within\:text-primary:focus-within {
   color:  var(--color-text1);
 }
@@ -15525,12 +15550,20 @@ video {
   color:  var(--color-text2);
 }
 
+.hover\:text-header:hover {
+  color:  var(--color-header);
+}
+
 .hover\:text-primary:hover {
   color:  var(--color-text1);
 }
 
 .hover\:text-secondary:hover {
   color:  var(--color-text2);
+}
+
+.focus\:text-header:focus {
+  color:  var(--color-header);
 }
 
 .focus\:text-primary:focus {
@@ -33234,12 +33267,20 @@ video {
     letter-spacing:  0.1em;
   }
 
+  .sm\:text-header {
+    color:  var(--color-header);
+  }
+
   .sm\:text-primary {
     color:  var(--color-text1);
   }
 
   .sm\:text-secondary {
     color:  var(--color-text2);
+  }
+
+  .group:hover .sm\:group-hover\:text-header {
+    color:  var(--color-header);
   }
 
   .group:hover .sm\:group-hover\:text-primary {
@@ -33250,6 +33291,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .sm\:focus-within\:text-header:focus-within {
+    color:  var(--color-header);
+  }
+
   .sm\:focus-within\:text-primary:focus-within {
     color:  var(--color-text1);
   }
@@ -33258,12 +33303,20 @@ video {
     color:  var(--color-text2);
   }
 
+  .sm\:hover\:text-header:hover {
+    color:  var(--color-header);
+  }
+
   .sm\:hover\:text-primary:hover {
     color:  var(--color-text1);
   }
 
   .sm\:hover\:text-secondary:hover {
     color:  var(--color-text2);
+  }
+
+  .sm\:focus\:text-header:focus {
+    color:  var(--color-header);
   }
 
   .sm\:focus\:text-primary:focus {
@@ -50950,12 +51003,20 @@ video {
     letter-spacing:  0.1em;
   }
 
+  .md\:text-header {
+    color:  var(--color-header);
+  }
+
   .md\:text-primary {
     color:  var(--color-text1);
   }
 
   .md\:text-secondary {
     color:  var(--color-text2);
+  }
+
+  .group:hover .md\:group-hover\:text-header {
+    color:  var(--color-header);
   }
 
   .group:hover .md\:group-hover\:text-primary {
@@ -50966,6 +51027,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .md\:focus-within\:text-header:focus-within {
+    color:  var(--color-header);
+  }
+
   .md\:focus-within\:text-primary:focus-within {
     color:  var(--color-text1);
   }
@@ -50974,12 +51039,20 @@ video {
     color:  var(--color-text2);
   }
 
+  .md\:hover\:text-header:hover {
+    color:  var(--color-header);
+  }
+
   .md\:hover\:text-primary:hover {
     color:  var(--color-text1);
   }
 
   .md\:hover\:text-secondary:hover {
     color:  var(--color-text2);
+  }
+
+  .md\:focus\:text-header:focus {
+    color:  var(--color-header);
   }
 
   .md\:focus\:text-primary:focus {
@@ -68666,12 +68739,20 @@ video {
     letter-spacing:  0.1em;
   }
 
+  .lg\:text-header {
+    color:  var(--color-header);
+  }
+
   .lg\:text-primary {
     color:  var(--color-text1);
   }
 
   .lg\:text-secondary {
     color:  var(--color-text2);
+  }
+
+  .group:hover .lg\:group-hover\:text-header {
+    color:  var(--color-header);
   }
 
   .group:hover .lg\:group-hover\:text-primary {
@@ -68682,6 +68763,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .lg\:focus-within\:text-header:focus-within {
+    color:  var(--color-header);
+  }
+
   .lg\:focus-within\:text-primary:focus-within {
     color:  var(--color-text1);
   }
@@ -68690,12 +68775,20 @@ video {
     color:  var(--color-text2);
   }
 
+  .lg\:hover\:text-header:hover {
+    color:  var(--color-header);
+  }
+
   .lg\:hover\:text-primary:hover {
     color:  var(--color-text1);
   }
 
   .lg\:hover\:text-secondary:hover {
     color:  var(--color-text2);
+  }
+
+  .lg\:focus\:text-header:focus {
+    color:  var(--color-header);
   }
 
   .lg\:focus\:text-primary:focus {
@@ -86382,12 +86475,20 @@ video {
     letter-spacing:  0.1em;
   }
 
+  .xl\:text-header {
+    color:  var(--color-header);
+  }
+
   .xl\:text-primary {
     color:  var(--color-text1);
   }
 
   .xl\:text-secondary {
     color:  var(--color-text2);
+  }
+
+  .group:hover .xl\:group-hover\:text-header {
+    color:  var(--color-header);
   }
 
   .group:hover .xl\:group-hover\:text-primary {
@@ -86398,6 +86499,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .xl\:focus-within\:text-header:focus-within {
+    color:  var(--color-header);
+  }
+
   .xl\:focus-within\:text-primary:focus-within {
     color:  var(--color-text1);
   }
@@ -86406,12 +86511,20 @@ video {
     color:  var(--color-text2);
   }
 
+  .xl\:hover\:text-header:hover {
+    color:  var(--color-header);
+  }
+
   .xl\:hover\:text-primary:hover {
     color:  var(--color-text1);
   }
 
   .xl\:hover\:text-secondary:hover {
     color:  var(--color-text2);
+  }
+
+  .xl\:focus\:text-header:focus {
+    color:  var(--color-header);
   }
 
   .xl\:focus\:text-primary:focus {
@@ -104098,12 +104211,20 @@ video {
     letter-spacing:  0.1em;
   }
 
+  .\32xl\:text-header {
+    color:  var(--color-header);
+  }
+
   .\32xl\:text-primary {
     color:  var(--color-text1);
   }
 
   .\32xl\:text-secondary {
     color:  var(--color-text2);
+  }
+
+  .group:hover .\32xl\:group-hover\:text-header {
+    color:  var(--color-header);
   }
 
   .group:hover .\32xl\:group-hover\:text-primary {
@@ -104114,6 +104235,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .\32xl\:focus-within\:text-header:focus-within {
+    color:  var(--color-header);
+  }
+
   .\32xl\:focus-within\:text-primary:focus-within {
     color:  var(--color-text1);
   }
@@ -104122,12 +104247,20 @@ video {
     color:  var(--color-text2);
   }
 
+  .\32xl\:hover\:text-header:hover {
+    color:  var(--color-header);
+  }
+
   .\32xl\:hover\:text-primary:hover {
     color:  var(--color-text1);
   }
 
   .\32xl\:hover\:text-secondary:hover {
     color:  var(--color-text2);
+  }
+
+  .\32xl\:focus\:text-header:focus {
+    color:  var(--color-header);
   }
 
   .\32xl\:focus\:text-primary:focus {
