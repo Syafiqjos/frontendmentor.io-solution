@@ -14,6 +14,28 @@
   --color-text3: hsl(221, 14%, 31%);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary:  hsl(176, 100%, 44%);
+    --color-secondary: hsl(281, 89%, 26%);
+    --color-ternary: hsl(268, 47%, 21%);
+    --color-primary-shadow:  hsl(177, 92%, 70%);
+    --color-secondary-shadow: hsl(285, 91%, 52%);
+    --color-ternary-shadow: hsl(290, 70%, 36%);
+    --color-neutral1: hsl(268, 71%, 12%);
+    --color-neutral2: hsl(268, 71%, 12%);
+    --color-neutral3: hsl(268, 75%, 9%);
+    --color-header: hsl(52, 100%, 62%);
+    --color-text1: hsl(198, 20%, 13%);
+    --color-text2: hsl(0, 100%, 100%);
+    --color-text3: hsl(52, 100%, 62%);
+  }
+
+  :root .calculator__theme-switcher {
+    justify-content: flex-end;
+  }
+}
+
 :root.theme2 {
   --color-primary:  hsl(25, 98%, 40%);
   --color-secondary: hsl(185, 42%, 37%);
