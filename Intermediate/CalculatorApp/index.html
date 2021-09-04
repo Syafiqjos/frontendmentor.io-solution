@@ -19,6 +19,8 @@
 		<link rel="stylesheet" href="style.css" />
 
 		<title>Frontend Mentor | Calculator app</title>
+
+		<script defer src="script.js"></script>
 	</head>
 	<body class="bg-neutral3">
 		<main class="min-h-screen grid place-items-center">
@@ -38,7 +40,7 @@
 								<span>3</span>
 							</div>
 							<div
-								class="calculator__theme-switcher bg-neutral2 rounded-2xl w-16 flex items-center"
+								id="theme-switcher" class="calculator__theme-switcher bg-neutral2 rounded-2xl w-16 flex items-center cursor-pointer"
 							>
 								<div
 									class="bg-primary rounded-full w-4 h-4 m-1"
@@ -50,7 +52,7 @@
 				<div
 					class="bg-neutral1 rounded-lg p-5 text-right text-white mb-6 text-3xl"
 				>
-					<strong>399,981</strong>
+					<input id="calculator-field" class="bg-neutral1 overflow-hidden block text-right w-full" value="399,981" disabled />
 				</div>
 				<div
 					class="bg-neutral2 rounded-lg p-5 text-right text-white text-3xl grid grid-cols-4 grid-rows-5 gap-3 drop-shadow-lg"
@@ -58,128 +60,128 @@
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-number-7" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							7
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-number-8" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							8
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-number-9" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							9
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-secondaryShadow text-secondary rounded font-bold text-center text-lg grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-secondary rounded w-full mb-1 py-5 grid place-items-center">
+						<button id="calculator-delete" class="bg-secondary rounded w-full mb-1 py-5 grid place-items-center">
 							DEL
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-number-4" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							4
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-number-5" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							5
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-number-6" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							6
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-operator-add" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							+
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-number-1" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							1
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-number-2" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							2
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-number-3" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							3
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-operator-sub" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							-
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-frac" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							.
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-number-0" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							0
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-operator-div" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							/
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-ternaryShadow text-ternary rounded font-bold text-center text-3xl grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
+						<button id="calculator-operator-mult" class="bg-ternary rounded w-full mb-1 py-4 grid place-items-center">
 							x
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-secondaryShadow text-secondary rounded font-bold text-center col-span-2 text-lg grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-secondary rounded w-full mb-1 py-5 grid place-items-center">
+						<button id="calculator-reset" class="bg-secondary rounded w-full mb-1 py-5 grid place-items-center">
 							RESET
-						</div>
+						</button>
 					</div>
 					<div
 						class="bg-primaryShadow text-primary rounded pont-bold text-center col-span-2 text-lg grid place-items-center shadow-md drop-shadow-lg"
 					>
-						<div class="bg-primary rounded w-full mb-1 py-5 grid place-items-center">
+						<button id="calculator-calculate" class="bg-primary rounded w-full mb-1 py-5 grid place-items-center">
 							=
-						</div>
+						</button>
 					</div>
 				</div>
 			</section>
