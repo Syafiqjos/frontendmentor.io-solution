@@ -10,7 +10,8 @@
   --color-neutral3: hsl(222, 26%, 31%);
   --color-header: hsl(0, 100%, 100%);
   --color-text1: hsl(0, 100%, 100%);
-  --color-text2: hsl(221, 14%, 31%);
+  --color-text2: hsl(0, 100%, 100%);
+  --color-text3: hsl(221, 14%, 31%);
 }
 
 :root.theme2 {
@@ -25,10 +26,24 @@
   --color-neutral3: hsl(0, 0%, 90%);
   --color-header: hsl(60, 10%, 19%);
   --color-text1: hsl(0, 100%, 100%);
-  --color-text2: hsl(60, 10%, 19%);
+  --color-text2: hsl(0, 100%, 100%);
+  --color-text3: hsl(60, 10%, 19%);
 }
 
 :root.theme3 {
+  --color-primary:  hsl(176, 100%, 44%);
+  --color-secondary: hsl(281, 89%, 26%);
+  --color-ternary: hsl(268, 47%, 21%);
+  --color-primary-shadow:  hsl(177, 92%, 70%);
+  --color-secondary-shadow: hsl(285, 91%, 52%);
+  --color-ternary-shadow: hsl(290, 70%, 36%);
+  --color-neutral1: hsl(268, 71%, 12%);
+  --color-neutral2: hsl(268, 71%, 12%);
+  --color-neutral3: hsl(268, 75%, 9%);
+  --color-header: hsl(52, 100%, 62%);
+  --color-text1: hsl(198, 20%, 13%);
+  --color-text2: hsl(0, 100%, 100%);
+  --color-text3: hsl(52, 100%, 62%);
 }
 
 /*! tailwindcss v2.2.9 | MIT License | https://tailwindcss.com */
@@ -15526,6 +15541,10 @@ video {
   color:  var(--color-text2);
 }
 
+.text-ternary {
+  color:  var(--color-text3);
+}
+
 .group:hover .group-hover\:text-header {
   color:  var(--color-header);
 }
@@ -15536,6 +15555,10 @@ video {
 
 .group:hover .group-hover\:text-secondary {
   color:  var(--color-text2);
+}
+
+.group:hover .group-hover\:text-ternary {
+  color:  var(--color-text3);
 }
 
 .focus-within\:text-header:focus-within {
@@ -15550,6 +15573,10 @@ video {
   color:  var(--color-text2);
 }
 
+.focus-within\:text-ternary:focus-within {
+  color:  var(--color-text3);
+}
+
 .hover\:text-header:hover {
   color:  var(--color-header);
 }
@@ -15562,6 +15589,10 @@ video {
   color:  var(--color-text2);
 }
 
+.hover\:text-ternary:hover {
+  color:  var(--color-text3);
+}
+
 .focus\:text-header:focus {
   color:  var(--color-header);
 }
@@ -15572,6 +15603,10 @@ video {
 
 .focus\:text-secondary:focus {
   color:  var(--color-text2);
+}
+
+.focus\:text-ternary:focus {
+  color:  var(--color-text3);
 }
 
 .text-opacity-0 {
@@ -33279,6 +33314,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .sm\:text-ternary {
+    color:  var(--color-text3);
+  }
+
   .group:hover .sm\:group-hover\:text-header {
     color:  var(--color-header);
   }
@@ -33289,6 +33328,10 @@ video {
 
   .group:hover .sm\:group-hover\:text-secondary {
     color:  var(--color-text2);
+  }
+
+  .group:hover .sm\:group-hover\:text-ternary {
+    color:  var(--color-text3);
   }
 
   .sm\:focus-within\:text-header:focus-within {
@@ -33303,6 +33346,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .sm\:focus-within\:text-ternary:focus-within {
+    color:  var(--color-text3);
+  }
+
   .sm\:hover\:text-header:hover {
     color:  var(--color-header);
   }
@@ -33315,6 +33362,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .sm\:hover\:text-ternary:hover {
+    color:  var(--color-text3);
+  }
+
   .sm\:focus\:text-header:focus {
     color:  var(--color-header);
   }
@@ -33325,6 +33376,10 @@ video {
 
   .sm\:focus\:text-secondary:focus {
     color:  var(--color-text2);
+  }
+
+  .sm\:focus\:text-ternary:focus {
+    color:  var(--color-text3);
   }
 
   .sm\:text-opacity-0 {
@@ -51015,6 +51070,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .md\:text-ternary {
+    color:  var(--color-text3);
+  }
+
   .group:hover .md\:group-hover\:text-header {
     color:  var(--color-header);
   }
@@ -51025,6 +51084,10 @@ video {
 
   .group:hover .md\:group-hover\:text-secondary {
     color:  var(--color-text2);
+  }
+
+  .group:hover .md\:group-hover\:text-ternary {
+    color:  var(--color-text3);
   }
 
   .md\:focus-within\:text-header:focus-within {
@@ -51039,6 +51102,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .md\:focus-within\:text-ternary:focus-within {
+    color:  var(--color-text3);
+  }
+
   .md\:hover\:text-header:hover {
     color:  var(--color-header);
   }
@@ -51051,6 +51118,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .md\:hover\:text-ternary:hover {
+    color:  var(--color-text3);
+  }
+
   .md\:focus\:text-header:focus {
     color:  var(--color-header);
   }
@@ -51061,6 +51132,10 @@ video {
 
   .md\:focus\:text-secondary:focus {
     color:  var(--color-text2);
+  }
+
+  .md\:focus\:text-ternary:focus {
+    color:  var(--color-text3);
   }
 
   .md\:text-opacity-0 {
@@ -68751,6 +68826,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .lg\:text-ternary {
+    color:  var(--color-text3);
+  }
+
   .group:hover .lg\:group-hover\:text-header {
     color:  var(--color-header);
   }
@@ -68761,6 +68840,10 @@ video {
 
   .group:hover .lg\:group-hover\:text-secondary {
     color:  var(--color-text2);
+  }
+
+  .group:hover .lg\:group-hover\:text-ternary {
+    color:  var(--color-text3);
   }
 
   .lg\:focus-within\:text-header:focus-within {
@@ -68775,6 +68858,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .lg\:focus-within\:text-ternary:focus-within {
+    color:  var(--color-text3);
+  }
+
   .lg\:hover\:text-header:hover {
     color:  var(--color-header);
   }
@@ -68787,6 +68874,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .lg\:hover\:text-ternary:hover {
+    color:  var(--color-text3);
+  }
+
   .lg\:focus\:text-header:focus {
     color:  var(--color-header);
   }
@@ -68797,6 +68888,10 @@ video {
 
   .lg\:focus\:text-secondary:focus {
     color:  var(--color-text2);
+  }
+
+  .lg\:focus\:text-ternary:focus {
+    color:  var(--color-text3);
   }
 
   .lg\:text-opacity-0 {
@@ -86487,6 +86582,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .xl\:text-ternary {
+    color:  var(--color-text3);
+  }
+
   .group:hover .xl\:group-hover\:text-header {
     color:  var(--color-header);
   }
@@ -86497,6 +86596,10 @@ video {
 
   .group:hover .xl\:group-hover\:text-secondary {
     color:  var(--color-text2);
+  }
+
+  .group:hover .xl\:group-hover\:text-ternary {
+    color:  var(--color-text3);
   }
 
   .xl\:focus-within\:text-header:focus-within {
@@ -86511,6 +86614,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .xl\:focus-within\:text-ternary:focus-within {
+    color:  var(--color-text3);
+  }
+
   .xl\:hover\:text-header:hover {
     color:  var(--color-header);
   }
@@ -86523,6 +86630,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .xl\:hover\:text-ternary:hover {
+    color:  var(--color-text3);
+  }
+
   .xl\:focus\:text-header:focus {
     color:  var(--color-header);
   }
@@ -86533,6 +86644,10 @@ video {
 
   .xl\:focus\:text-secondary:focus {
     color:  var(--color-text2);
+  }
+
+  .xl\:focus\:text-ternary:focus {
+    color:  var(--color-text3);
   }
 
   .xl\:text-opacity-0 {
@@ -104223,6 +104338,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .\32xl\:text-ternary {
+    color:  var(--color-text3);
+  }
+
   .group:hover .\32xl\:group-hover\:text-header {
     color:  var(--color-header);
   }
@@ -104233,6 +104352,10 @@ video {
 
   .group:hover .\32xl\:group-hover\:text-secondary {
     color:  var(--color-text2);
+  }
+
+  .group:hover .\32xl\:group-hover\:text-ternary {
+    color:  var(--color-text3);
   }
 
   .\32xl\:focus-within\:text-header:focus-within {
@@ -104247,6 +104370,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .\32xl\:focus-within\:text-ternary:focus-within {
+    color:  var(--color-text3);
+  }
+
   .\32xl\:hover\:text-header:hover {
     color:  var(--color-header);
   }
@@ -104259,6 +104386,10 @@ video {
     color:  var(--color-text2);
   }
 
+  .\32xl\:hover\:text-ternary:hover {
+    color:  var(--color-text3);
+  }
+
   .\32xl\:focus\:text-header:focus {
     color:  var(--color-header);
   }
@@ -104269,6 +104400,10 @@ video {
 
   .\32xl\:focus\:text-secondary:focus {
     color:  var(--color-text2);
+  }
+
+  .\32xl\:focus\:text-ternary:focus {
+    color:  var(--color-text3);
   }
 
   .\32xl\:text-opacity-0 {

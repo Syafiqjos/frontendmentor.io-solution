@@ -16,7 +16,8 @@ module.exports = {
     textColor: {
       header: 'var(--color-header)',
       primary: 'var(--color-text1)',
-      secondary: 'var(--color-text2)'
+      secondary: 'var(--color-text2)',
+      ternary: 'var(--color-text3)'
     },
     extend: {
       fontFamily: {
