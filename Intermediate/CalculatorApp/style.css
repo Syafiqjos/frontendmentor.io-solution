@@ -18460,6 +18460,18 @@ video {
   /* height: 600px; */
 }
 
+:root.theme1 .calculator__theme-switcher {
+  justify-content: flex-start;
+}
+
+:root.theme2 .calculator__theme-switcher {
+  justify-content: center;
+}
+
+:root.theme3 .calculator__theme-switcher {
+  justify-content: flex-end;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width:  100%;
