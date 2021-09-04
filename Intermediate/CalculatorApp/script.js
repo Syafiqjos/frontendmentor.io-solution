@@ -126,8 +126,9 @@ function nextTheme() {
     }
     changeTheme(theme);
 }
-function changeTheme(theme) {
-    var newTheme = "theme" + theme;
+function changeTheme(nTheme) {
+    var newTheme = "theme" + nTheme;
     document.documentElement.className = newTheme;
-    localStorage.setItem('theme', theme.toString());
+    localStorage.setItem('theme', nTheme.toString());
+    theme = nTheme;
 }

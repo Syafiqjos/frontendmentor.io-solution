@@ -1,5 +1,10 @@
 module.exports = {
-  // purge: [ 'index.html' ],
+  purge: {
+    content: [ 'index.html' ],
+    options: {
+      keyframes: true
+    }
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {

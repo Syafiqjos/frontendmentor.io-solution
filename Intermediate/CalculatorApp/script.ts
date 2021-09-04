@@ -153,9 +153,11 @@ function nextTheme(){
     changeTheme(theme);
 }
 
-function changeTheme(theme: number){
-    const newTheme = "theme" + theme;
+function changeTheme(nTheme: number){
+    const newTheme = "theme" + nTheme;
     document.documentElement.className = newTheme;
 
-    localStorage.setItem('theme', theme.toString())
+    localStorage.setItem('theme', nTheme.toString())
+
+    theme = nTheme;
 }
