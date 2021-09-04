@@ -2,6 +2,9 @@ module.exports = {
   // purge: [ 'index.html' ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      sm: '320px'
+    },
     colors: {
       primary: 'var(--color-primary)',
       secondary: 'var(--color-secondary)',
