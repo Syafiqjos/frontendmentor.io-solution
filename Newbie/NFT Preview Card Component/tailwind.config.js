@@ -15,6 +15,7 @@ module.exports = {
       'outfit': ['"Outfit"', 'sans-serif']
     },
     screens: {
+      'mini': '200px',
       'mobile': '375px',
       'desktop': '1440px'
     }
