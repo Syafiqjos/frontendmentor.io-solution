@@ -3,3 +3,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nft-preview {
+    position: relative;
+}
+
+.nft-preview::after {
+    content: "";
+    margin: auto;
+    
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    pointer-events: none;
+
+    background-color: hsla(178, 100%, 50%, 0.0);
+    z-index: 10;
+
+    border-radius: 0.5rem;
+
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.nft-preview:hover::after {
+    content: url('./images/icon-view.svg');
+
+    background-color: hsla(178, 100%, 50%, 0.5);
+}
