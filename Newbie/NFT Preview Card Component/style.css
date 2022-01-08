@@ -621,6 +621,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.hover\:cursor-pointer:hover{
+  cursor: pointer;
+}
+
+.hover\:text-primary-cyan:hover{
+  --tw-text-opacity: 1;
+  color: hsl(178 100% 50% / var(--tw-text-opacity));
+}
+
 @media (min-width: 200px){
   .mini\:mb-0{
     margin-bottom: 0px;
