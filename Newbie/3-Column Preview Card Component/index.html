@@ -16,7 +16,7 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 
-    p {
+    .text-content {
       font-size: 15px;
       font-family: 'Lexend Deca', sans-serif;
     }
@@ -44,6 +44,11 @@
       background-color: hsla(0, 0%, 100%, 0.75)
     }
 
+    .bg-color-neutral-pure-white {
+      background-color: hsl(0, 0%, 100%);
+      border-color: hsl(0, 0%, 100%);
+    }
+
     .text-color-neutral-gray {
       color: hsl(0, 0%, 95%);
     }
@@ -63,13 +68,31 @@
     .bg-color-primary-dark {
       background-color: hsl(179, 100%, 13%);
     }
+
+    .text-color-primary-orange {
+      color: hsl(31, 77%, 52%);
+    }
+
+    .text-color-primary-cyan {
+      color: hsl(184, 100%, 22%);
+    }
+
+    .text-color-primary-dark {
+      color: hsl(179, 100%, 13%);
+    }
+
+    .btn {
+      padding: 15px;
+      width: 150px;
+      max-width: 100%;
+    }
   </style>
 </head>
 <body class="min-vh-100 bg-color-neutral-gray">
   <div id="page" class="container p-0 mh-inherit d-flex flex-column justify-content-center align-items-center">
     <main class="container p-4 flex-grow-1 flex-fill d-flex flex-column justify-content-center align-items-center">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-md-3">
+      <div class="container border rounded-3">
+        <div class="row row-cols-1 row-cols-lg-3">
           <div class="col text-color-neutral-gray bg-color-primary-orange">
             <div class="container p-5">
               <div class="row mb-4">
@@ -80,12 +103,17 @@
                   Sedans
                 </div>
               </div>
-              <div class="row">
+              <div class="row mb-3">
                 <div class="col">
-                  <p class="text-color-neutral-white">
+                  <p class="text-content text-color-neutral-white">
                     Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
                     or on your next road trip.
                   </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button class="text-content heading text-color-primary-orange btn btn-primary bg-color-neutral-pure-white rounded-pill">Learn More</button>
                 </div>
               </div>
             </div>
@@ -100,12 +128,17 @@
                   SUVs
                 </div>
               </div>
-              <div class="row">
+              <div class="row mb-3">
                 <div class="col">
-                  <p class="text-color-neutral-white">
+                  <p class="text-content text-color-neutral-white">
                     Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
                     and off-road adventures.
                   </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button class="text-content heading text-color-primary-cyan btn btn-primary bg-color-neutral-pure-white rounded-pill">Learn More</button>
                 </div>
               </div>
             </div>
@@ -120,12 +153,17 @@
                   Luxury
                 </div>
               </div>
-              <div class="row">
+              <div class="row mb-3">
                 <div class="col">
-                  <p class="text-color-neutral-white">
+                  <p class="text-content text-color-neutral-white">
                     Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
                     rental and arrive in style.
                   </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button class="text-content heading text-color-primary-dark btn btn-primary bg-color-neutral-pure-white rounded-pill">Learn More</button>
                 </div>
               </div>
             </div>
