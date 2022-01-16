@@ -11,60 +11,121 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    p {
+      font-size: 15px;
+      font-family: 'Lexend Deca', sans-serif;
+    }
+
+    .text-heading {
+      font-family: 'Big Shoulders Display', cursive;
+      font-weight: 700;
+      font-size: 32px;
+      text-transform: uppercase;
+    }
+
+    .img-heading {
+      width: 72px;
+    }
 
     .mh-inherit {
       min-height: inherit;
     }
+
+    .bg-color-neutral-gray {
+      background-color: hsl(0, 0%, 95%);
+    }
+
+    .bg-color-neutral-white {
+      background-color: hsla(0, 0%, 100%, 0.75)
+    }
+
+    .text-color-neutral-gray {
+      color: hsl(0, 0%, 95%);
+    }
+
+    .text-color-neutral-white {
+      color: hsla(0, 0%, 100%, 0.75);
+    }
+
+    .bg-color-primary-orange {
+      background-color: hsl(31, 77%, 52%);
+    }
+
+    .bg-color-primary-cyan {
+      background-color: hsl(184, 100%, 22%);
+    }
+
+    .bg-color-primary-dark {
+      background-color: hsl(179, 100%, 13%);
+    }
   </style>
 </head>
-<body class="min-vh-100">
-  <div id="page" class="container-fluid mh-inherit d-flex flex-column justify-content-center align-items-center">
-    <main class="container flex-grow-1 flex-fill d-flex flex-column justify-content-center align-items-center">
+<body class="min-vh-100 bg-color-neutral-gray">
+  <div id="page" class="container p-0 mh-inherit d-flex flex-column justify-content-center align-items-center">
+    <main class="container p-4 flex-grow-1 flex-fill d-flex flex-column justify-content-center align-items-center">
       <div class="container">
         <div class="row row-cols-1 row-cols-md-3">
-          <div class="col">
-            <div class="container">
-              <div class="row">
-                <div class="col">
+          <div class="col text-color-neutral-gray bg-color-primary-orange">
+            <div class="container p-5">
+              <div class="row mb-4">
+                <img class="img-heading" src="./images/icon-sedans.svg" alt="">
+              </div>
+              <div class="row mb-4">
+                <div class="col text-heading">
                   Sedans
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
-                  or on your next road trip.
+                  <p class="text-color-neutral-white">
+                    Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+                    or on your next road trip.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="container">
-              <div class="row">
-                <div class="col">
+          <div class="col text-color-neutral-gray bg-color-primary-cyan">
+            <div class="container p-5">
+              <div class="row mb-4">
+                <img class="img-heading" src="./images/icon-suvs.svg" alt="">
+              </div>
+              <div class="row mb-4">
+                <div class="col text-heading">
                   SUVs
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
-                  and off-road adventures.
+                  <p class="text-color-neutral-white">
+                    Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+                    and off-road adventures.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="container">
-              <div class="row">
-                <div class="col">
+          <div class="col text-color-neutral-gray bg-color-primary-dark">
+            <div class="container p-5">
+              <div class="row mb-4">
+                <img class="img-heading" src="./images/icon-luxury.svg" alt="">
+              </div>
+              <div class="row mb-4">
+                <div class="col text-heading">
                   Luxury
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
-                  rental and arrive in style.
+                  <p class="text-color-neutral-white">
+                    Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+                    rental and arrive in style.
+                  </p>
                 </div>
               </div>
             </div>
