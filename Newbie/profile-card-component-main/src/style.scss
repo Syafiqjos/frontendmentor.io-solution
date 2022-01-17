@@ -2,3 +2,24 @@
 @import '~bootstrap/scss/_variables';
 
 @import '~bootstrap/scss/bootstrap';
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.background-image-1 {
+    background-image: url("../static/images/bg-pattern-bottom.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-image-2 {
+    background-image: url("../static/images/bg-pattern-card.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-image-3 {
+    background-image: url("../static/images/bg-pattern-top.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
