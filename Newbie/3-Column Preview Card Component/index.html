@@ -86,6 +86,34 @@
       width: 150px;
       max-width: 100%;
     }
+
+    .section-cell:first-of-type {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+
+    .section-cell:last-of-type {
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+
+    @media screen and (min-width: 992px) {
+      .section-cell:first-of-type {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+      }
+
+      .section-cell:last-of-type {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+      }
+    }
   </style>
 </head>
 <body class="min-vh-100 bg-color-neutral-gray">
@@ -93,7 +121,7 @@
     <main class="container p-4 flex-grow-1 flex-fill d-flex flex-column justify-content-center align-items-center">
       <div class="container border rounded-3">
         <div class="row row-cols-1 row-cols-lg-3">
-          <div class="col text-color-neutral-gray bg-color-primary-orange">
+          <div class="section-cell col text-color-neutral-gray bg-color-primary-orange">
             <div class="container p-5">
               <div class="row mb-4">
                 <img class="img-heading" src="./images/icon-sedans.svg" alt="">
@@ -113,12 +141,12 @@
               </div>
               <div class="row">
                 <div class="col">
-                  <button class="text-content heading text-color-primary-orange btn btn-primary bg-color-neutral-pure-white rounded-pill">Learn More</button>
+                  <button class="mt-auto text-content heading text-color-primary-orange btn btn-primary bg-color-neutral-pure-white rounded-pill">Learn More</button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col text-color-neutral-gray bg-color-primary-cyan">
+          <div class="section-cell col text-color-neutral-gray bg-color-primary-cyan">
             <div class="container p-5">
               <div class="row mb-4">
                 <img class="img-heading" src="./images/icon-suvs.svg" alt="">
@@ -138,12 +166,12 @@
               </div>
               <div class="row">
                 <div class="col">
-                  <button class="text-content heading text-color-primary-cyan btn btn-primary bg-color-neutral-pure-white rounded-pill">Learn More</button>
+                  <button class="mt-auto text-content heading text-color-primary-cyan btn btn-primary bg-color-neutral-pure-white rounded-pill">Learn More</button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col text-color-neutral-gray bg-color-primary-dark">
+          <div class="section-cell col text-color-neutral-gray bg-color-primary-dark">
             <div class="container p-5">
               <div class="row mb-4">
                 <img class="img-heading" src="./images/icon-luxury.svg" alt="">
@@ -163,7 +191,7 @@
               </div>
               <div class="row">
                 <div class="col">
-                  <button class="text-content heading text-color-primary-dark btn btn-primary bg-color-neutral-pure-white rounded-pill">Learn More</button>
+                  <button class="mt-auto text-content heading text-color-primary-dark btn btn-primary bg-color-neutral-pure-white rounded-pill">Learn More</button>
                 </div>
               </div>
             </div>
@@ -172,9 +200,9 @@
       </div>
     </main>
     
-    <footer class="attribution flex-grow-0">
+    <footer class="attribution flex-grow-0 p-4">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/Syafiqjos">Ahmad Syafiq Aqil Wafi</a>.
     </footer>
   </div>
 </body>
