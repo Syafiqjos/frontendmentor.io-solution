@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-// $font-family-sans-serif: 'Kumbh Sans', sans-serif;
-// $border-radius-lg: 1rem;
+$font-family-sans-serif: 'Kumbh Sans', sans-serif;
+$border-radius-lg: 1rem;
+
+$h5-font-size: 1.15rem;
 
 // $font-size-base: 18px;
 
 @import '~bootstrap/scss/_functions';
 @import '~bootstrap/scss/_variables';
 @import '~bootstrap/scss/_utilities';
+
+$font-sizes: map-merge($font-sizes, (7: 0.875rem));
 
 $custom-theme-colors: (
     "dark-cyan": hsl(185, 75%, 39%),
@@ -66,12 +70,6 @@ $utilities: map-merge($utilities,
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-.background-image-1 {
-    background-image: url("../static/images/bg-pattern-bottom.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 .background-image-2 {
     background-image: url("../static/images/bg-pattern-card.svg");
     background-size: cover;
@@ -79,7 +77,23 @@ $utilities: map-merge($utilities,
 }
 
 .background-image-3 {
-    background-image: url("../static/images/bg-pattern-top.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: hsl(185, 75%, 39%);
+    background-image: url("../static/images/bg-pattern-top.svg"), url("../static/images/bg-pattern-bottom.svg");
+    background-size: 600px, 600px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left -320px top -200px, right -320px bottom -200px;
+}
+
+@media (min-width: 100px) {
+    .background-image-3 {
+        background-position: left -140px top -240px, right -140px bottom -240px;
+    }
+}
+
+.fs-7 {
+    font-size: 0.875rem;
+}
+
+.text-neutral-gray {
+    color: hsl(0, 0%, 59%);
 }
