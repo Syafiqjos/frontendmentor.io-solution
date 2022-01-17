@@ -1,5 +1,31 @@
+$border-radius-lg: 1rem;
+
 @import '~bootstrap/scss/_functions';
 @import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/_utilities';
+
+$custom-theme-colors: (
+    "dark-cyan": hsl(185, 75%, 39%),
+    "dark-blue": hsl(229, 23%, 23%),
+    "dark-gray": hsl(227, 10%, 46%)
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+$utilities: map-merge($utilities, 
+    (
+        "rounded": map-merge(
+            map-get($utilities, "rounded"), (
+                values: map-merge(
+                    map-get(map-get($utilities, "rounded"), "values"),
+                    (
+                        4: 1rem
+                    )
+                )
+            )
+        )
+    )
+);
 
 @import '~bootstrap/scss/bootstrap';
 
