@@ -6,7 +6,6 @@ import {
 
 import Home from './views/Home';
 import Footer from './components/Footer';
-import './App.css';
 
 const route = (
   <Route path="/" element={<Home />} />
@@ -15,8 +14,8 @@ const route = (
 function App() {
   return (
     <Router>
-      <div className="App">
-        <main>
+      <div className="min-h-screen flex flex-col">
+        <main className="grow">
           <Routes>
             {route}
           </Routes>
