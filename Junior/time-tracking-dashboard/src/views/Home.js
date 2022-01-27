@@ -95,6 +95,7 @@ function Home() {
 		<section className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 h-full w-full md:max-w-[800px] gap-5 p-6">
 			<UserCard
 				filterTrigger={setTimerSelection}
+				filterStatus={timerSelection}
 				profileImage={profileImage}
 				fullName="Jeremy Robson"
 			/>

@@ -2,6 +2,7 @@ function UserCard({
 	profileImage = null,
 	fullName = null,
 	filterTrigger = null,
+	filterStatus = null,
 }) {
 	const invokeFilterTrigger = (filter) => {
 		if (typeof filterTrigger === "function") {
@@ -33,7 +34,11 @@ function UserCard({
 					<li className="text-center sm:text-left">
 						<button
 							onClick={() => invokeFilterTrigger("day")}
-							className="text-sm text-neutral-desaturated-blue"
+							className={`text-sm ${
+								filterStatus === "day"
+									? "text-white"
+									: "text-neutral-desaturated-blue"
+							}`}
 						>
 							Daily
 						</button>
@@ -41,7 +46,11 @@ function UserCard({
 					<li className="text-center sm:text-left">
 						<button
 							onClick={() => invokeFilterTrigger("week")}
-							className="text-sm"
+							className={`text-sm ${
+								filterStatus === "week"
+									? "text-white"
+									: "text-neutral-desaturated-blue"
+							}`}
 						>
 							Weekly
 						</button>
@@ -49,7 +58,11 @@ function UserCard({
 					<li className="text-center sm:text-left">
 						<button
 							onClick={() => invokeFilterTrigger("month")}
-							className="text-sm text-neutral-desaturated-blue"
+							className={`text-sm ${
+								filterStatus === "month"
+									? "text-white"
+									: "text-neutral-desaturated-blue"
+							}`}
 						>
 							Monthly
 						</button>
