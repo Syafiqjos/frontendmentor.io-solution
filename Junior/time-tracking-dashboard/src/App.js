@@ -7,14 +7,15 @@ const route = <Route path="/" element={<Home />} />;
 
 function App() {
 	return (
-		<Router>
-			<div className="min-h-screen flex flex-col">
-				<main className="flex grow items-center justify-center bg-neutral-very-dark-blue">
-					<Routes>{route}</Routes>
-				</main>
-				<Footer />
-			</div>
-		</Router>
+		// <Router>
+		<div className="min-h-screen flex flex-col">
+			<main className="flex grow items-center justify-center bg-neutral-very-dark-blue">
+				{/* <Routes>{route}</Routes> */}
+				<Home />
+			</main>
+			<Footer />
+		</div>
+		// </Router>
 	);
 }
 
