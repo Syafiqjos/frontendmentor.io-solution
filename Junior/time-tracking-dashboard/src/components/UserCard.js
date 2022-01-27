@@ -1,28 +1,34 @@
 function UserCard({ profileImage = null, fullName = null }) {
 	return (
 		<section className="row-span-2 font-rubik bg-neutral-dark-blue rounded-xl text-white overflow-hidden flex flex-col justify-between">
-			<div className="flex flex-col bg-primary-blue rounded-xl p-6 grow">
-				<img
-					className="w-16 border border-white border-2 rounded-full shadow-md mb-4"
-					src={profileImage}
-					alt="Profile"
-				/>
-				<span className="text-xs text-neutral-pale-blue mb-1">
-					Report for
-				</span>
-				<span className="font-light text-3xl mb-4">{fullName}</span>
+			<div className="flex flex-row sm:flex-col bg-primary-blue rounded-xl p-6 grow">
+				<div className="flex justify-start items-center mr-5 shrink-0">
+					<img
+						className="my-auto w-16 border border-white border-2 rounded-full shadow-md sm:mb-4"
+						src={profileImage}
+						alt="Profile"
+					/>
+				</div>
+				<div className="flex flex-col shrink-1">
+					<span className="text-xs text-neutral-pale-blue mb-1">
+						Report for
+					</span>
+					<span className="font-light text-3xl mb-0 md:mb-4">
+						{fullName}
+					</span>
+				</div>
 			</div>
-			<div className="flex flex-col p-6">
-				<ul className="flex flex-col gap-2">
-					<li>
+			<div className="flex flex-col p-2 py-6 sm:p-6">
+				<ul className="sm:flex sm:flex-col grid grid-cols-3 gap-2">
+					<li className="text-center sm:text-left">
 						<button className="text-sm text-neutral-desaturated-blue">
 							Daily
 						</button>
 					</li>
-					<li>
+					<li className="text-center sm:text-left">
 						<button className="text-sm">Weekly</button>
 					</li>
-					<li>
+					<li className="text-center sm:text-left">
 						<button className="text-sm text-neutral-desaturated-blue">
 							Monthly
 						</button>
