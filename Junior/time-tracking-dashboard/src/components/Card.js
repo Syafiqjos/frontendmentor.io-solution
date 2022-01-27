@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import ellipsisIcon from "../images/icon-ellipsis.svg";
 
 function Card({
@@ -8,9 +9,17 @@ function Card({
 	durationTime = null,
 	durationDesc = null,
 }) {
+	const [onLoadClasses, setOnLoadClasses] = useState("opacity-0");
+
+	useEffect(() => {
+		setTimeout(() => {
+			setOnLoadClasses("opacity-100");
+		}, 300);
+	}, []);
+
 	return (
 		<section
-			className={`font-rubik rounded-xl text-white overflow-hidden ${backgroundColor}`}
+			className={`transition-opacity ease-in-out duration-300 ${onLoadClasses} font-rubik rounded-xl text-white overflow-hidden ${backgroundColor}`}
 		>
 			<div
 				className={`bg-[right_8px_top] h-8 bg-no-repeat bg-[length:3rem] ${backgroundIcon}`}

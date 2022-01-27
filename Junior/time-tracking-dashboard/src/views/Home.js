@@ -107,8 +107,8 @@ function Home() {
 							.indexOf(timerSelection) !== -1
 					);
 				})
-				.map((element) => {
-					return <Card {...element} />;
+				.map((element, index) => {
+					return <Card key={`card-${index}`} {...element} />;
 				})}
 		</section>
 	);
