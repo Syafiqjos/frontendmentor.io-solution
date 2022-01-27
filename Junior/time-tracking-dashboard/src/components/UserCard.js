@@ -34,7 +34,7 @@ function UserCard({
 					<li className="text-center sm:text-left">
 						<button
 							onClick={() => invokeFilterTrigger("day")}
-							className={`text-sm ${
+							className={`text-sm hover:text-white ${
 								filterStatus === "day"
 									? "text-white"
 									: "text-neutral-desaturated-blue"
@@ -46,7 +46,7 @@ function UserCard({
 					<li className="text-center sm:text-left">
 						<button
 							onClick={() => invokeFilterTrigger("week")}
-							className={`text-sm ${
+							className={`text-sm hover:text-white ${
 								filterStatus === "week"
 									? "text-white"
 									: "text-neutral-desaturated-blue"
@@ -58,7 +58,7 @@ function UserCard({
 					<li className="text-center sm:text-left">
 						<button
 							onClick={() => invokeFilterTrigger("month")}
-							className={`text-sm ${
+							className={`text-sm hover:text-white ${
 								filterStatus === "month"
 									? "text-white"
 									: "text-neutral-desaturated-blue"
