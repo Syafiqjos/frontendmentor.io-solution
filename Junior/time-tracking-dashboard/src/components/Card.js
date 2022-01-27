@@ -10,11 +10,16 @@ function Card({
 	durationDesc = null,
 }) {
 	const [onLoadClasses, setOnLoadClasses] = useState("opacity-0");
-
 	useEffect(() => {
-		setTimeout(() => {
+		const timeout = setTimeout(() => {
 			setOnLoadClasses("opacity-100");
 		}, 300);
+
+		return () => {
+			if (timeout) {
+				clearTimeout(timeout);
+			}
+		};
 	}, []);
 
 	return (
