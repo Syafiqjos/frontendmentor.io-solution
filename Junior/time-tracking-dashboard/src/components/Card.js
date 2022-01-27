@@ -16,7 +16,7 @@ function Card({
 				className={`bg-[right_8px_top] h-8 bg-no-repeat bg-[length:3rem] ${backgroundIcon}`}
 			></div>
 			<div className="bg-neutral-dark-blue flex flex-col p-6">
-				<div className="flex flex-row justify-between mb-6">
+				<div className="flex flex-row justify-between mb-2 sm:mb-6">
 					<span className="text-xs">{title}</span>
 					<div className="flex justify-center aligns-center">
 						<button>
@@ -24,9 +24,13 @@ function Card({
 						</button>
 					</div>
 				</div>
-				<div className="text-4xl font-light mb-2 mr-12">{time}</div>
-				<div className="text-xs font-light text-neutral-pale-blue">
-					{durationTime} - {durationDesc}
+				<div className="flex flex-row justify-between sm:flex-col sm:justify-start items-center sm:items-start">
+					<div className="text-4xl font-light sm:mb-2 mr-12">
+						{time}
+					</div>
+					<div className="text-xs font-light text-neutral-pale-blue">
+						{durationTime} - {durationDesc}
+					</div>
 				</div>
 			</div>
 		</section>
