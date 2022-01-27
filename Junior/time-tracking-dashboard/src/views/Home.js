@@ -1,6 +1,8 @@
 import UserCard from "../components/UserCard";
 import Card from "../components/Card";
 
+import profileImage from "../images/image-jeremy.png";
+
 function Home() {
 	const timerData = [
 		{
@@ -54,8 +56,8 @@ function Home() {
 	];
 
 	return (
-		<section className="grid grid-cols-4 h-full gap-5">
-			<UserCard className="row-span-2" />
+		<section className="grid grid-cols-4 h-full max-w-[800px] gap-5">
+			<UserCard profileImage={profileImage} fullName="Jeremy Robson" />
 			{timerData.map((element) => {
 				return <Card {...element} />;
 			})}
