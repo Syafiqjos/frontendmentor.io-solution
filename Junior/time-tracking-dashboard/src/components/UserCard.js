@@ -1,4 +1,14 @@
-function UserCard({ profileImage = null, fullName = null }) {
+function UserCard({
+	profileImage = null,
+	fullName = null,
+	filterTrigger = null,
+}) {
+	const invokeFilterTrigger = (filter) => {
+		if (typeof filterTrigger === "function") {
+			filterTrigger(filter);
+		}
+	};
+
 	return (
 		<section className="row-span-2 font-rubik bg-neutral-dark-blue rounded-xl text-white overflow-hidden flex flex-col justify-between">
 			<div className="flex flex-row sm:flex-col bg-primary-blue rounded-xl p-6 grow">
@@ -21,15 +31,26 @@ function UserCard({ profileImage = null, fullName = null }) {
 			<div className="flex flex-col p-2 py-6 sm:p-6">
 				<ul className="sm:flex sm:flex-col grid grid-cols-3 gap-2">
 					<li className="text-center sm:text-left">
-						<button className="text-sm text-neutral-desaturated-blue">
+						<button
+							onClick={() => invokeFilterTrigger("day")}
+							className="text-sm text-neutral-desaturated-blue"
+						>
 							Daily
 						</button>
 					</li>
 					<li className="text-center sm:text-left">
-						<button className="text-sm">Weekly</button>
+						<button
+							onClick={() => invokeFilterTrigger("week")}
+							className="text-sm"
+						>
+							Weekly
+						</button>
 					</li>
 					<li className="text-center sm:text-left">
-						<button className="text-sm text-neutral-desaturated-blue">
+						<button
+							onClick={() => invokeFilterTrigger("month")}
+							className="text-sm text-neutral-desaturated-blue"
+						>
 							Monthly
 						</button>
 					</li>
