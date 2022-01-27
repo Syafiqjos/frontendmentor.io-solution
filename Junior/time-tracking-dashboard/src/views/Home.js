@@ -56,7 +56,7 @@ function Home() {
 	];
 
 	return (
-		<section className="grid grid-cols-4 h-full max-w-[800px] gap-5">
+		<section className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 h-full w-full md:max-w-[800px] gap-5 p-6">
 			<UserCard profileImage={profileImage} fullName="Jeremy Robson" />
 			{timerData.map((element) => {
 				return <Card {...element} />;
