@@ -10,12 +10,12 @@ function Card({
 }) {
 	return (
 		<section
-			className={`font-rubik rounded-xl text-white ${backgroundColor}`}
+			className={`font-rubik rounded-xl text-white overflow-hidden ${backgroundColor}`}
 		>
 			<div
 				className={`bg-[right_8px_top] h-8 bg-no-repeat bg-[length:3rem] ${backgroundIcon}`}
 			></div>
-			<div className="bg-neutral-dark-blue flex flex-col p-6 rounded-xl">
+			<div className="bg-neutral-dark-blue flex flex-col p-6">
 				<div className="flex flex-row justify-between mb-4">
 					<span className="text-xs">{title}</span>
 					<div className="flex justify-center aligns-center">
